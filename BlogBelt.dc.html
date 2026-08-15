@@ -11,21 +11,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b; --color-accent-700:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -102,7 +103,7 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:32px 0 32px;">
 <a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
 <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Sinner's Belt — Devlog</h1>
-<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a 20-person academic AAA capstone, Sep–Dec 2025.</p>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Weekly production log for a 20-person academic AAA capstone, Sep–Dec 2025.</p>
 <a href="./Production.dc.html#sinners-belt" style="font-size:14px;font-weight:600;">Read the case study →</a>
 </section>
 
@@ -129,7 +130,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w1" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 1</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">September 24th 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">September 24th 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Astral Automaton Assistance -- A Space Robot Piloting Game. The full pitch deck can be accessed here: https://docs.google.com/presentation/d/1la7jtDXJUL7M4V22Op3Z0oAOmcCT703znD92CZyJzyw/edit?usp=sharing<br>Knowing that I wanted to create a winning game pitch for this project, I came to the first team meeting prepared. I thought carefully and strategically about the kind of idea that would be appropriate for a ten week project -- the idea had to be something easy to understand because anything too unique, niche or esoteric would require too much detailed communication to fit into a 3 week pre-production planning period, appropriately scoped for a team of between 15 -- 20 developers spread across two campuses. It had to be an idea that people understood without having to make everyone read a 100 page design document about, if that makes sense.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I also took into account the composition of our team, as I it was absolutely key to the brief that everyone have their own 'design domain' so to speak -- with 6 designers in total the 'creative vision' would have to be split 6 ways and that is not an easy task.</p>
@@ -142,7 +143,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w2" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 2</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">October 1st 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">October 1st 2025</span>
 </div>
 <div style="border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;margin:20px 0;"><img src="./assets/devlog-belt-1.png" alt="Sinner's Belt pitch slide showing the proposed plot and art style" style="width:100%;display:block;"></div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Sinner's Belt pitch slide on their proposed art style. I don't really see what exactly is marrying all these very disparate images together, but then AAA games aren't known to have very unique art styles anyway.<br>Today we heard the pitch of the game idea Sinner's Belt from the two designers on the Birmingham side of the project. It's an FPS set in a dystopian spacefaring future. Which seems perfectly fine as an idea. At the end of the day it doesn't truly matter which idea gets made, mainly that a game that we can all be proud of gets made.</p>
@@ -153,7 +154,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w3" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 3</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">October 8th 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">October 8th 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week was spent pre-production. Designers IB and RA were required to come up with a Worldbuilding design document and a Combat Design document respectively. After having read and interpreted IB's Worldbuilding document I set about writing a Quest and Level Design document and doing the legwork that would communicate my vision to the rest of the team. I convened a meeting with the team's environment artists to discuss the scope of the level we were to produce within the 10 week timespan of this project.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">As part of my role as designer I convened a separate smaller meeting without the programmers about beginning the level block-out and visual character design and ideation. I included combat desingner RA as I thought her input would be valued. However as it transpired RA had some rigid ideas about what should or shouldn't be in the quest, which I thought was my domain of design. Her excessive stubborness about certain details of how the level should be designed, which I had understood was my area of work, and her insistence that we should down-scope the project to her preference, despite not having discussed this with our production manager KS who is actually the person with the final say, was truly baffling.</p>
@@ -164,7 +165,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w4" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 4</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">October 15th 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">October 15th 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I get the sense that the artists on our team were getting worried about the direction of the project. So I spoke to them about my quest and level design, as well as providing them with a written document to refer to, in order to guide their concepting of enemies and environment art. Here, again RA became a blocker in the production process. She disagreed again with my quest design and tried to essentially bully me into changing it, which is not actually a thing that she has the power to do, according to our brief.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The core issue was that the Combat Design document that RA had produced was not helpful in supporting MB and myself in our roles as Quest and Level designers. The Combat Design document was not the clearest and RA herself did not show the kind of leadership needed for a person in her role -- the design of the combat shapes the design of the level, and RA made no attempt to initiate communication to MB and myself about her ideas, other than to send us her 'work in progress' combat design document.</p>
@@ -177,7 +178,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w5" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 5</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">October 22nd 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">October 22nd 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week's All Hands meeting was met with a palpable sense of relief at the severing of ties with designers IB and RA from the Birmingham office. The morale of the whole team was lifted at the prospect of not having to second guess what the leadership in the Birmngham office where going to come up with as fresh new blockers to the production process. MB the level designer was able to dive in freshly energised at her task of designing the leve, ZZ the art lead was able forge ahead with defining the art style of the project with fresh aplomb. Not much has changed for the programming team as the Guildford Office is home to the majority of the programmers anyway, but the UI implementation work was reassigned to MG</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I spent the week proslytising my Quest and Level design document. As reinstated Lead Designer I was excited by the opportunity to write the dialogue for the scene. Sadly our previous production manager KS has dropped out of the team and I therefore had to shoulder some of his responsibilities as production manager, but GK and I decided to share out the tasks that were left behind in his wake and I was grateful for her support on that.</p>
@@ -188,7 +189,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w6" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 6</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">29th October 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">29th October 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The team has made some great progress this week, especially GK on the UI design. Since there was very little spare artist capacity GK made all the UI assets herself.</p>
 <div style="border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;margin:20px 0;"><img src="./assets/devlog-belt-4.png" alt="HUD mockup by GK showing health, shield and mission objective UI" style="width:100%;display:block;"></div>
@@ -200,7 +201,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w7" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 7</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">November 5th 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">November 5th 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I was impressed by the leadship of Lead Programmer EW in pulling together a first playable for us this week. I won't post any pictures or videos of it because without the art implemented it's actually not much to see. The design feedback that we gave to the programmers is that they have to think more towards giving the game more 'game juice' and feedback in the way that the player character is controlled.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Artist EU struggled with completing the game's splash screen design to the team's satisfaction this week. On the whole MB's communication style was not helpful as I believe she uses much harsher language than really needed, although I'm not entirely sure she's fully aware of her communication style issues.</p>
@@ -212,7 +213,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w8" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 8</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">November 12th 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">November 12th 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">With the end of the project only a fortnight away the whole team is very stressed and anxious. As production managers GK and I had to but the (mild, metaphorical) thumbscrews on the Art Team who have not delivered, at all, on their committment to having all the art assets completed in implemented by the time of the All Hands meeting mid-week.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">MB has taken on the task of making the game's menu/splash page, as we deemed that the energy we spent trying to 'manage' artist EU into doing what was needed to fit the brief too cumbersome, and MB could get it done relatively quickly anyway. The same could be said for all the in-game environment props on our asset list. ZZ the art lead agreed with us that this was the most expedient way forward was to just use ready made, free to download assets to populate the scene, instead of trying too hard to work with EU who doesn't seem to have a feel for the kind of look we need for this project. Ultimately the project comes first, above any individual person's ego. So we had to take away some art tasks from EU but mindful of the conflict-ridden first half of this project, I made a note of thanking EU for his contribution in modelling the player character's gun, which honestly is quite a professional looking well-done job.</p>
@@ -225,7 +226,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w9" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 9</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">19th November 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">19th November 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">During our All Hands this week I thought it my duty as Lead Designer to bring up the fact that the game is still quite short on gameplay content, as the project brief stated that it needed to contain 10 minutes of gameplay. We had a great meeting where everyone ( we're all gamers) pitched in and brainstormed different ideas for how to make the game last longer whilst continuing to only use the tools and assets that we already have. It was one of those gamedev moments that I live for -- morale was high because the prototype is looking and playing rather well, and we all had some amount of breathing space to just be together as a group of creatives who all love games, bouncing ideas off each other about game design.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The production leadership instituted a hard stop this week on all non-sound related production. The finish line seems very near, but in some ways this is only the beginning of the end. There's still bug fixing and playtesting, which will inevitably bring up some terrible game-breaking bugs. We're braced for impact however -- I've honestly enjoyed working with this team, and believe that the vertical slice we've produced is some of the best, most professional looking, polished game dev work I've ever done.</p>
@@ -236,7 +237,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w10" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 10</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">26th November 2026</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">26th November 2026</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This was an incredibly hectic week for our team as we scrambled to cram in all the things that we would have had ample time for had the project started on time and not been affected by the split we suffered at week 4.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I lead a group internal playtesting session in which we tweaked the parameters of the game to fit more closely to the design brief. I marveled at the gamefeel and gameplay that the programmers were able to produce in a short 10 weeks. I guided the adjusting of the game parameters until the game felt challenging but not impossible. (We also did a great deal of bug reporting and fixing, which is of course less gratifying but incredibly important to the QA process)</p>
@@ -253,7 +254,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="aaa-w11" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 11</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">December 3rd 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">December 3rd 2025</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Postmortem</p>
 <div style="border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;margin:20px 0;background:#fff;"><img src="./assets/devlog-belt-13.png" alt="The Sinner's Belt logo designed by GK, incorporating the Tristellaris worldbuilding motif" style="width:100%;display:block;"></div>
@@ -266,7 +267,7 @@ a:hover{color:var(--color-accent-600);}
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The game's menu page, as designed and realised by MB. I loved our use of the menu page as part of the mission onboarding, as I thought it was a nice little piece of efficient game tutorial/onboarding design. (the pink cannister is the McGuffin object of the demo's fetch quest)</p>
 </article>
 </section>
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

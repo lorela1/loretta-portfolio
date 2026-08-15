@@ -11,26 +11,27 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif;
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
 .btn-primary{background:var(--color-accent);color:var(--color-bg);}
 .btn-primary:hover{background:var(--color-accent-600);}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .btn-block{display:flex;width:100%;margin-bottom:10px;}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .card-kicker{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:10px;display:block;}
-.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0;}
+.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 95%, transparent);margin:0;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -103,14 +104,14 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:64px 0 40px;max-width:620px;">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;">Case studies</span>
 <h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1.1;margin:0 0 20px;">Production Portfolio</h1>
-<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Three group productions, most recent first: a 20-person academic AAA capstone split across two campuses and two mid-size collaborations with 12 week runways. Each below entry covers the design, the production decisions, and what leading the team actually looked like week to week. Solo and designer work lives on the <a href="./Design.dc.html">Design Portfolio</a>&nbsp;page.</p>
+<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Three group productions, most recent first: a 20-person academic AAA capstone split across two campuses and two mid-size collaborations with 12 week runways. Each below entry covers the design, the production decisions, and what leading the team actually looked like week to week. Solo and designer work lives on the <a href="./Design.dc.html">Design Portfolio</a>&nbsp;page.</p>
 </section>
 
 <!-- ============ SINNER'S BELT ============ -->
 <section id="sinners-belt" style="padding:48px 0;border-top:1px solid var(--color-divider);">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Academic Capstone · 10 Weeks · Sep–Dec 2025 · ~20-person team, two campuses</span>
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Sinner's Belt</h2>
-<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A dystopian sci-fi FPS built across two campuses, produced to an AAA brief</p>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0 0 28px;">A dystopian sci-fi FPS built across two campuses, produced to an AAA brief</p>
 
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
 <img src="./assets/hero-port-belt-hero.webp" alt="Sinner's Belt key art / gameplay screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -146,7 +147,7 @@ a:hover{color:var(--color-accent-600);}
 <section id="little-pig" style="padding:48px 0;border-top:1px solid var(--color-divider);">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Game Jam · 11 Weeks · May–Jul 2025 · Team of 6</span>
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Little Pig</h2>
-<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A horror-stealth puzzle platformer about a pig escaping the slaughterhouse</p>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0 0 28px;">A horror-stealth puzzle platformer about a pig escaping the slaughterhouse</p>
 
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
 <img src="./assets/hero-port-pig-hero.webp" alt="Little Pig key art / gameplay screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -182,7 +183,7 @@ a:hover{color:var(--color-accent-600);}
 <section id="doggo-detective" style="padding:48px 0 80px;border-top:1px solid var(--color-divider);">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Game Jam · 12 Weeks · May–Aug 2024 · Team of 8</span>
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Doggo Detective</h2>
-<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A cozy detective game about a Hong Kong police dog</p>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0 0 28px;">A cozy detective game about a Hong Kong police dog</p>
 
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
 <img src="./assets/hero-port-doggo-hero.webp" alt="Doggo Detective key art / gameplay screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -213,7 +214,7 @@ a:hover{color:var(--color-accent-600);}
 </div>
 </section>
 
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

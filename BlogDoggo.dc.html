@@ -11,21 +11,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b; --color-accent-700:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -102,7 +103,7 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:32px 0 32px;">
 <a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
 <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Doggo Detective — Devlog</h1>
-<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a cozy detective game, May–Aug 2024.</p>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Weekly production log for a cozy detective game, May–Aug 2024.</p>
 <a href="./Production.dc.html#doggo-detective" style="font-size:14px;font-weight:600;">Read the case study →</a>
 </section>
 
@@ -128,7 +129,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w1" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 1</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 4, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Designing a Cosy Game about a Police Dog for an Indie Game Jam</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Having spent a week researching and playing detective games, the following things stand out to be as sources of inspiration:</p>
@@ -146,7 +147,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w2" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 2</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 4, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Agile Methodolgy</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The Agile method for software development emphasises the making of a working product over paperwork. However I think it's worth documenting the humourous way in which our producer JP helped break the ice. Not all of us have been a part of a 'scrum' before so we engaged in a practice one in which we are all engineers and/or researchers at a turning-stone-into-gold facility. I can recommend it as a fun, enjoyable method for introducing the practice of scrum meetings to a newly formed team of developers.</p>
@@ -158,7 +159,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w3" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 3</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 4, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Easing into Production</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">JP our producer is very against the KanBan method or any kind of paper planning of the project whatsoever. I pushed back against this and insisted that we have a Trello board to keep us up to date with who is doing what. I lost my battle with him to have a Gantt chart illustrate our work co-dependancies because 'he hates Gantt charts' and I was reluctant to make him do something he didn't enjoy. [In later weeks I come to regret this. It is my firm belief that if we had planned production better, we could have got more features and more polish to the game, but hey ho, learning process.]</p>
@@ -173,7 +174,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w4" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 4</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 4, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Producer JP away this week. I lead the scrum meeting and it went as expected. People seem to know what they are doing, using the Trello and the design documents.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">All of us got some support in down-versioning our project in Unity to a 2022 version in order to be able to use the Quibli toon shader asset. [ This is a shader asset that I bought and paid for from the Unity asset store ages ago, and never used for anything but now is the perfect tool for making our cozy game!] We spent some time fiddling with the shader settings and making it look 'right' for our game's 'look'.</p>
@@ -185,7 +186,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w5" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 5 &amp; 6</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 2, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week I missed two project sessions due to Covid and Covid recovery.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I havent had much of a chance to look at work done by colleagues in the last two weeks but I did ask JK to re-do the programming of the crate puzzle mechanics as I thought his solution was a bit overengineered.</p>
@@ -196,7 +197,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w6" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 7</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 2, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Pulling the Team out of Development Slump</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Almost all projects have a middle slump where people aren't feeling the urgency of the deadline but have gone way past the keen and excitement beginning it. The finish line is nowhere in sight. Progress feels glacial.</p>
@@ -207,7 +208,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w7" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 8</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 2, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Slamming the Big Red Button</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Our producer J has been on the warpath. We have no first playable, nothing even close. There was disgruntlement regarding his tone of voice, but nobody denied that his message was sound.</p>
@@ -220,7 +221,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w8" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 9</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 2, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Grim Fatigue</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Have you ever heard of the concept of 'Grim Fatigue'? It's a phrase that I associate with watching Attack on Titan, the anime series. It boils down to -- if you're trying to convey a sense of fear, dread, danger or emergency it does not do to overdo it.</p>
@@ -233,7 +234,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w9" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 10</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 2, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Minimum Viable Product -- A Significant Milestone for Team Doggo</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">We managed to pull a minimum build together middle of last week and some of the QA testing has begun. This was a small win that we celebrated as a team!</p>
@@ -250,7 +251,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="doggo-w10" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 12</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 1, 2024</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 1, 2024</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">During our final team meeting we had a group post mortem. This journey has not been without its hurdles but honestly I remain incredibly proud of what the team has achieved over the course of the last three months.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The prototype is of course not finished and could still benefit from a lot more polishing and tweaking. I wrote a list of tasks on the whiteboard and guided the allocation of the work in the following week leading up to the August 5th deadline -- we're still doing project sharing semi-caveman style where each member of the team checks out the project on Github, works on it one day of the week, and then pushes their changes before handing the branch off to the next team member.</p>
@@ -274,7 +275,7 @@ a:hover{color:var(--color-accent-600);}
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Many testers loved our prototype and are keen to see Doggo Detective developed further! I couldn't be more pleased to see my initial vision turned into a working prototype.</p>
 </article>
 </section>
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

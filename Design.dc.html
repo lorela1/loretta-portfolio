@@ -11,26 +11,27 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif;
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
 .btn-primary{background:var(--color-accent);color:var(--color-bg);}
 .btn-primary:hover{background:var(--color-accent-600);}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .btn-block{display:flex;width:100%;margin-bottom:10px;}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .card-kicker{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:10px;display:block;}
-.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0;}
+.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 95%, transparent);margin:0;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -103,14 +104,14 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:64px 0 40px;max-width:620px;">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;">Solo work</span>
 <h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1.1;margin:0 0 20px;">Design Portfolio</h1>
-<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Self-initiated projects — solo, or in small teams I formed and led myself — outside of larger assigned productions. Those live on the <a href="./Production.dc.html">Production Portfolio</a>.</p>
+<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Self-initiated projects — solo, or in small teams I formed and led myself — outside of larger assigned productions. Those live on the <a href="./Production.dc.html">Production Portfolio</a>.</p>
 </section>
 
 <!-- ============ BAST ============ -->
 <section id="bast" style="padding:24px 0 80px;border-top:1px solid var(--color-divider);">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Personal Project · 12 Weeks · May–Aug 2026 · Solo</span>
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Bast</h2>
-<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A hieroglyph-wordsearch visual novel about a reincarnated temple cat</p>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0 0 28px;">A hieroglyph-wordsearch visual novel about a reincarnated temple cat</p>
 
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
 <img src="./assets/hero-port-bast-hero.webp" alt="Bast key art / gameplay screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -147,7 +148,7 @@ a:hover{color:var(--color-accent-600);}
 <section id="scran-dash" style="padding:24px 0 80px;border-top:1px solid var(--color-divider);">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Self-Initiated · Team of 3 (from 4) · Academic Module</span>
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Scran Dash</h2>
-<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game</p>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0 0 28px;">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game</p>
 
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
 <img src="./assets/hero-port-scran-hero.webp" alt="Scran Dash key art / gameplay screenshot" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -180,7 +181,7 @@ a:hover{color:var(--color-accent-600);}
 </div>
 </section>
 
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

@@ -11,20 +11,21 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b; --color-accent-700:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -100,7 +101,7 @@ a:hover{color:var(--color-accent-600);}
 <img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:88px;height:88px;border-radius:50%;object-fit:cover;border:1px solid var(--color-divider);flex-shrink:0;">
 <div>
 <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(36px,5vw,48px);margin:0 0 8px;">Loretta Lok</h1>
-<p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0;">Game Producer · Designer · Developer</p>
+<p style="font-size:17px;color:color-mix(in srgb, var(--color-text) 90%, transparent);margin:0;">Game Producer · Designer · Developer</p>
 </div>
 </section>
 
@@ -114,19 +115,19 @@ a:hover{color:var(--color-accent-600);}
 <div class="cv-kicker" style="margin-bottom:16px;">Software Skills</div>
 <div style="margin-bottom:20px;">
 <div style="font-family:var(--font-heading);font-weight:600;font-size:14px;margin-bottom:6px;">Game Development</div>
-<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);"><b>Unity 6</b> — 2D and 3D systems, gameplay architecture<br><b>C#</b> programming<br><b>Yarn Spinner</b> — branching dialogue tooling<br><b>Git</b> &amp; <b>GitHub Desktop</b> — version control<br><b>VS Code</b> &amp; <b>Claude Code</b> — AI-assisted dev workflow</p>
+<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 95%, transparent);"><b>Unity 6</b> — 2D and 3D systems, gameplay architecture<br><b>C#</b> programming<br><b>Yarn Spinner</b> — branching dialogue tooling<br><b>Git</b> &amp; <b>GitHub Desktop</b> — version control<br><b>VS Code</b> &amp; <b>Claude Code</b> — AI-assisted dev workflow</p>
 </div>
 
 <div class="cv-kicker" style="margin-bottom:16px;">Production Tools &amp; Methods</div>
-<p style="font-size:13px;line-height:1.7;margin:0 0 20px;color:color-mix(in srgb, var(--color-text) 80%, transparent);"><b>Trello</b> and <b>Codecks</b> — sprint &amp; task tracking, KanBan<br><b>Git</b> — version control, team-wide adoption<br><b>Scrum</b> — weekly stand-ups, deputising for producer<br><b>Miro</b> — team ideation, communication and design<br><b>External playtesting</b> — questionnaire design<br><b>Postmortems</b> — retrospective facilitation<br><b>Game Design Documents</b> — pitch &amp; spec writing<br><b>Sprint Logs </b>— production documentation and <b>Agile Methodology</b></p>
+<p style="font-size:13px;line-height:1.7;margin:0 0 20px;color:color-mix(in srgb, var(--color-text) 95%, transparent);"><b>Trello</b> and <b>Codecks</b> — sprint &amp; task tracking, KanBan<br><b>Git</b> — version control, team-wide adoption<br><b>Scrum</b> — weekly stand-ups, deputising for producer<br><b>Miro</b> — team ideation, communication and design<br><b>External playtesting</b> — questionnaire design<br><b>Postmortems</b> — retrospective facilitation<br><b>Game Design Documents</b> — pitch &amp; spec writing<br><b>Sprint Logs </b>— production documentation and <b>Agile Methodology</b></p>
 
 <div style="margin-bottom:20px;">
 <div style="font-family:var(--font-heading);font-weight:600;font-size:14px;margin-bottom:6px;">Art &amp; Visual Pipeline</div>
-<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);"><b>GIMP</b> — sprite prep, compositing<br><b>Stable Diffusion</b> — AI-assisted concept &amp; background art<br><b>Unity Sprite Atlas</b> workflows<br><b>Maya</b> and <b>Blender</b> for 3D level prototyping</p>
+<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 95%, transparent);"><b>GIMP</b> — sprite prep, compositing<br><b>Stable Diffusion</b> — AI-assisted concept &amp; background art<br><b>Unity Sprite Atlas</b> workflows<br><b>Maya</b> and <b>Blender</b> for 3D level prototyping</p>
 </div>
 <div>
 <div style="font-family:var(--font-heading);font-weight:600;font-size:14px;margin-bottom:6px;">Audio Production</div>
-<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);"><b>Suno AI</b> — prompt-driven music composition</p>
+<p style="font-size:13px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 95%, transparent);"><b>Suno AI</b> — prompt-driven music composition</p>
 </div>
 </div>
 
@@ -137,9 +138,9 @@ a:hover{color:var(--color-accent-600);}
 <div class="cv-kicker">Game Production Achievements</div>
 <div style="display:flex;flex-direction:column;gap:26px;">
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Lead Designer (Quest &amp; Level Design) — <a href="./Production.dc.html#sinners-belt">Sinner's Belt</a> — Academic Capstone</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);white-space:nowrap;">Sep–Dec 2025</span></div>
-<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:0 0 10px;">10 weeks · ~20-person team, two campuses · dystopian sci-fi FPS built to an AAA brief</p>
-<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 85%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Lead Designer (Quest &amp; Level Design) — <a href="./Production.dc.html#sinners-belt">Sinner's Belt</a> — Academic Capstone</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);white-space:nowrap;">Sep–Dec 2025</span></div>
+<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 10px;">10 weeks · ~20-person team, two campuses · dystopian sci-fi FPS built to an AAA brief</p>
+<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 100%, transparent);">
 <li style="margin-bottom:6px;">Was appointed Lead Designer, steering design decisions for a 20-person, two-campus team.</li>
 <li style="margin-bottom:6px;">Managed a cross-campus design conflict over role boundaries, feeding structured feedback back into the process via keeping sprint logs and weekly stand-ups.</li>
 <li style="margin-bottom:6px;">Absorbed the production-manager role after the Head of Production left mid-project, sharing the load with the UI designer to keep delivery on track.</li>
@@ -147,9 +148,9 @@ a:hover{color:var(--color-accent-600);}
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Co-Lead Designer, Narrative Design &amp; QA Lead — <a href="./Production.dc.html#little-pig">Little Pig</a> — Game Jam</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);white-space:nowrap;">May–Jul 2025</span></div>
-<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:0 0 10px;">11 weeks · team of 6 · horror-stealth puzzle platformer</p>
-<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 85%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Co-Lead Designer, Narrative Design &amp; QA Lead — <a href="./Production.dc.html#little-pig">Little Pig</a> — Game Jam</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);white-space:nowrap;">May–Jul 2025</span></div>
+<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 10px;">11 weeks · team of 6 · horror-stealth puzzle platformer</p>
+<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 100%, transparent);">
 <li style="margin-bottom:6px;">Co-led design and production for a 6-person team, splitting level design with a co-lead while retaining mechanic ownership.</li>
 <li style="margin-bottom:6px;">Mediated an art-pipeline dispute and sourced a backup outside artist to protect the schedule.</li>
 <li style="margin-bottom:6px;">Made the joint call to downscope from three rooms to two mid-production, safeguarding the final milestone.</li>
@@ -157,9 +158,9 @@ a:hover{color:var(--color-accent-600);}
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Game Designer &amp; Team Leader — <a href="./Production.dc.html#doggo-detective">Doggo Detective</a> — Game Jam</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);white-space:nowrap;">May–Aug 2024</span></div>
-<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:0 0 10px;">12 weeks · team of 8 · cozy detective game</p>
-<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 85%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:2px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Game Designer &amp; Team Leader — <a href="./Production.dc.html#doggo-detective">Doggo Detective</a> — Game Jam</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);white-space:nowrap;">May–Aug 2024</span></div>
+<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 10px;">12 weeks · team of 8 · cozy detective game</p>
+<ul style="font-size:14px;line-height:1.6;margin:0;padding-left:20px;color:color-mix(in srgb, var(--color-text) 100%, transparent);">
 <li style="margin-bottom:6px;">Made the winning pitch and wrote a Game Design Document for the game concept that the team selected from out of all the designs that were tabled.</li>
 <li style="margin-bottom:6px;">Ran weekly scrum meetings, deputising for the producer in his absence.</li>
 <li style="margin-bottom:6px;">Managed an underperforming team member by reassigning them to QA and arranging backup coverage, keeping delivery on schedule.</li>
@@ -178,63 +179,63 @@ a:hover{color:var(--color-accent-600);}
 <div class="cv-kicker">Education</div>
 <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:36px;">
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Academy of Contemporary Music</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">2023–2026</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Academy of Contemporary Music</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">2023–2026</span></div>
 <p style="font-size:14px;margin:0;">BA, Games Design and Development</p>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">BPP University</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">2015–2017</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">BPP University</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">2015–2017</span></div>
 <p style="font-size:14px;margin:0;">Bar Professional Training Course — Immigration Law &amp; IP Law electives</p>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Columbia University, Barnard College</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">2004–2007</span></div>
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:16px;">Columbia University, Barnard College</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">2004–2007</span></div>
 <p style="font-size:14px;margin:0;">BA, Cum Laude — English Literature, Minor in Political Science</p>
 </div>
 </div>
 
 <div class="cv-kicker" id="experience">Experience</div>
-<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:-12px 0 20px;">Prior work in legal advocacy and research, before getting into game development.</p>
+<p style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:-12px 0 20px;">Prior work in legal advocacy and research, before getting into game development.</p>
 <div style="display:flex;flex-direction:column;gap:18px;">
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Producer and Creative Director — AMAZONS the Science Fiction LARP</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Part-time · 2018</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Producer and Creative Director — AMAZONS the Science Fiction LARP</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Part-time · 2018</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Wrote, produced and directed a first-of-its-kind gender-exclusive feminist LARP for female and non-binary players.</li>
 <li style="margin-bottom:4px;">Led social media marketing and contracted external service providers.</li>
 <li style="margin-bottom:0;">Managed a team of creatives, supporting them to produce their best artistic work.</li>
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Volunteer Advisor — Citizens Advice Bureau</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Part-time · 2019–2020</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Volunteer Advisor — Citizens Advice Bureau</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Part-time · 2019–2020</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Specialised in advising EU citizens on their immigration status post-Brexit after receiving extensive training.</li>
 <li style="margin-bottom:0;">Answered client queries in person and by phone, and directed service users to appropriate resources.</li>
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Education Advocate — Communities Empowerment Network</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Jan–Aug 2016</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Education Advocate — Communities Empowerment Network</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Jan–Aug 2016</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Represented families of children facing school exclusions, speaking on their behalf at appeal hearings before a panel of School Governors.</li>
 <li style="margin-bottom:4px;">Drafted and delivered oral arguments to Exclusions Appeals Panels.</li>
 <li style="margin-bottom:0;">Guided families through the appeals process and advised them on their rights in education law.</li>
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Costs Enforcement Caseworker — The Access to Justice Foundation</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Dec–Jun 2014</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Costs Enforcement Caseworker — The Access to Justice Foundation</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Dec–Jun 2014</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Managed all pro bono case costs awards due to the Foundation, working closely with the CEO.</li>
 <li style="margin-bottom:4px;">Discussed strategy and process for costs enforcement.</li>
 <li style="margin-bottom:0;">Corresponded with lawyers and strengthened public relations with volunteer barristers.</li>
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Pro Bono Advocate — Free Representation Unit</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Jan–Aug 2013</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Pro Bono Advocate — Free Representation Unit</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Jan–Aug 2013</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Represented clients in the Employment Tribunal on unfair dismissal cases, and in the Social Security and Child Support Tribunals on disability welfare appeals.</li>
 <li style="margin-bottom:0;">FRU connects volunteers with legal skills to people needing free assistance with employment and benefits claims.</li>
 </ul>
 </div>
 <div>
-<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Senior Researcher — Chambers and Partners</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">Sep 2010–Sep 2012</span></div>
-<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">
+<div style="display:flex;justify-content:space-between;gap:16px;margin-bottom:4px;flex-wrap:wrap;"><span style="font-family:var(--font-heading);font-weight:600;font-size:15px;">Senior Researcher — Chambers and Partners</span><span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">Sep 2010–Sep 2012</span></div>
+<ul style="font-size:13px;line-height:1.6;margin:0;padding-left:18px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">
 <li style="margin-bottom:4px;">Conducted client and lawyer interviews to assemble rating information across IP, Technology, Data Protection and Partnership law.</li>
 <li style="margin-bottom:4px;">Researched legal and industry sectors across the UK and globally; arranged interviews with leading lawyers and industry experts.</li>
 <li style="margin-bottom:4px;">Analysed confidential firm submissions to produce evaluative ranking tables.</li>
@@ -249,12 +250,12 @@ a:hover{color:var(--color-accent-600);}
 </section>
 
 <section style="padding:24px 0 80px;">
-<p style="font-size:14px;color:color-mix(in srgb, var(--color-text) 60%, transparent);margin:0;">References available on request.</p>
+<p style="font-size:14px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0;">References available on request.</p>
 </section>
 
 </div>
 
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

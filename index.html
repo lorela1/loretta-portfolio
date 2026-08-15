@@ -11,26 +11,33 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif;
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
 .btn-primary{background:var(--color-accent);color:var(--color-bg);}
 .btn-primary:hover{background:var(--color-accent-600);}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
-.card{border:1px solid var(--color-divider);border-radius:4px;padding:26px;background:transparent;}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
+.btn-teal-1{background:#24484b;color:#f4eff1;}
+.btn-teal-1:hover{color:#d4491f;}
+.btn-teal-2{background:#4a7a7f;color:#f4eff1;}
+.btn-teal-2:hover{color:#d4491f;}
+.btn-teal-3{background:#8bacae;color:#1c1720;}
+.btn-teal-3:hover{color:#d4491f;}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:26px;background:#faf8f5;}
 .card-title{font-family:var(--font-display);font-size:19px;margin-bottom:8px;}
-.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0;}
-.tag{display:inline-flex;font-size:11px;letter-spacing:0.04em;padding:4px 11px;border-radius:20px;border:1px solid var(--color-divider);color:color-mix(in srgb, var(--color-text) 70%, transparent);}
+.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 95%, transparent);margin:0;}
+.tag{display:inline-flex;font-size:11px;letter-spacing:0.04em;padding:4px 11px;border-radius:20px;border:1px solid var(--color-divider);color:color-mix(in srgb, var(--color-text) 85%, transparent);background:#faf8f5;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -108,11 +115,10 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:56px 0 64px;max-width:640px;">
 <span style="display:block;font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;">Game Designer &amp; Producer</span>
 <h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(44px,6vw,64px);line-height:1.1;margin:0 0 24px;">Loretta Lok</h1>
-<p style="font-size:18px;line-height:1.6;margin:0 0 32px;color:color-mix(in srgb, var(--color-text) 85%, transparent);">I design and produce games, leading the multidisciplinary teams that build them — from two-week game jams to a twenty-person academic AAA production.</p>
+<p style="font-size:18px;line-height:1.6;margin:0 0 32px;color:color-mix(in srgb, var(--color-text) 100%, transparent);">I design and produce games, leading the multidisciplinary teams that build them — from two-week game jams to a twenty-person academic AAA production.</p>
 <div style="display:flex;gap:16px;flex-wrap:wrap;">
-<a href="./Production.dc.html" class="btn btn-primary">Production portfolio</a>
-<a href="./Design.dc.html" class="btn btn-secondary">Design portfolio</a>
-<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">Play on itch.io ↗</a>
+<a href="./Production.dc.html" class="btn btn-teal-1">Production portfolio</a>
+<a href="./Design.dc.html" class="btn btn-teal-2">Design portfolio</a>
 </div>
 </section>
 
@@ -123,7 +129,7 @@ a:hover{color:var(--color-accent-600);}
 
 <section id="as-a-producer" style="padding:8px 0 72px;border-top:1px solid var(--color-divider);">
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">As a producer</h2>
-<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;max-width:560px;">Evidence from three productions, not a list of buzzwords.</p>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0 0 32px;max-width:560px;">Evidence from three productions, not a list of buzzwords.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
 <div class="card">
 <div class="card-title">Team structure</div>
@@ -154,7 +160,7 @@ a:hover{color:var(--color-accent-600);}
 
 <section id="featured-projects" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">Featured projects</h2>
-<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;">From the <a href="./Production.dc.html">Production Portfolio</a> — see the <a href="./Design.dc.html">Design Portfolio</a> for solo work.</p>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0 0 32px;">From the <a href="./Production.dc.html">Production Portfolio</a> — see the <a href="./Design.dc.html">Design Portfolio</a> for solo work.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
 
 <a href="./Production.dc.html#sinners-belt" style="text-decoration:none;color:inherit;display:block;">
@@ -165,17 +171,17 @@ a:hover{color:var(--color-accent-600);}
 <span class="tag">Academic Capstone</span>
 </div>
 <h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Sinner's Belt</h3>
-<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A dystopian sci-fi FPS built across two campuses. Lead Designer, ~20-person team.</p>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 90%, transparent);">A dystopian sci-fi FPS built across two campuses. Lead Designer, ~20-person team.</p>
 <span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
 </a><a href="./Production.dc.html#little-pig" style="text-decoration:none;color:inherit;display:block;">
 <div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
 <img src="./screenshot-2025-07-21-103955-msuazjfn-wed9.png" alt="Little Pig key art" style="width:100%;height:100%;object-fit:cover;display:block;">
 </div>
 <div style="display:flex;gap:8px;margin-bottom:10px;">
-<span class="tag">Game Jam</span>
+<span class="tag">Indie Studio Project</span>
 </div>
 <h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Little Pig</h3>
-<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A horror-stealth puzzle platformer. Co-Lead Designer &amp; QA Lead, 6-person team.</p>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 90%, transparent);">A horror-stealth puzzle platformer. Co-Lead Designer &amp; QA Lead, 6-person team.</p>
 <span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
 </a>
 
@@ -184,10 +190,10 @@ a:hover{color:var(--color-accent-600);}
 <img src="./screenshot-2024-08-04-150751-msuaz2qy-499j.png" alt="Doggo Detective key art" style="width:100%;height:100%;object-fit:cover;display:block;">
 </div>
 <div style="display:flex;gap:8px;margin-bottom:10px;">
-<span class="tag">Game Jam</span>
+<span class="tag">Indie Studio Project</span>
 </div>
 <h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Doggo Detective</h3>
-<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A cozy detective game about a Hong Kong police dog. Game Designer &amp; Team Leader, 8-person team.</p>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 90%, transparent);">A cozy detective game about a Hong Kong police dog. Game Designer &amp; Team Leader, 8-person team.</p>
 <span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
 </a>
 
@@ -198,7 +204,7 @@ a:hover{color:var(--color-accent-600);}
 
 <section id="as-a-game-designer" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">As a game designer</h2>
-<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;max-width:560px;">Design decisions from two self-initiated projects, where the design was entirely mine to originate and defend.</p>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0 0 32px;max-width:560px;">Design decisions from two self-initiated projects, where the design was entirely mine to originate and defend.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
 <div class="card">
 <div class="card-title">Originating a concept</div>
@@ -229,7 +235,7 @@ a:hover{color:var(--color-accent-600);}
 
 <section id="featured-design-projects" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
 <h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">Featured design projects</h2>
-<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;">From the <a href="./Design.dc.html">Design Portfolio</a> — self-initiated projects, solo or in teams I formed myself.</p>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0 0 32px;">From the <a href="./Design.dc.html">Design Portfolio</a> — self-initiated projects, solo or in teams I formed myself.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
 
 <a href="./Design.dc.html#bast" style="text-decoration:none;color:inherit;display:block;">
@@ -237,10 +243,10 @@ a:hover{color:var(--color-accent-600);}
 <img src="./templedaybackground-msueyapm-q3qc.png" alt="Bast key art" style="width:100%;height:100%;object-fit:cover;display:block;">
 </div>
 <div style="display:flex;gap:8px;margin-bottom:10px;">
-<span class="tag">Personal Project</span>
+<span class="tag">Solo Development</span>
 </div>
 <h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Bast</h3>
-<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A hieroglyph-wordsearch visual novel about a reincarnated temple cat. Solo Developer.</p>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 90%, transparent);">A hieroglyph-wordsearch visual novel about a reincarnated temple cat. Solo Developer.</p>
 <span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
 </a>
 
@@ -249,17 +255,17 @@ a:hover{color:var(--color-accent-600);}
 <img src="./screenshot-2026-02-19-142710-msuezmlj-3ju3.png" alt="Scran Dash key art" style="width:100%;height:100%;object-fit:cover;display:block;">
 </div>
 <div style="display:flex;gap:8px;margin-bottom:10px;">
-<span class="tag">Self-Initiated</span>
+<span class="tag">Indie Studio Project</span>
 </div>
 <h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Scran Dash</h3>
-<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game. Design Lead &amp; Ideator.</p>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 90%, transparent);">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game. Design Lead &amp; Ideator.</p>
 <span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
 </a>
 
 </div>
 </section>
 
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

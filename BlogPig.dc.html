@@ -11,21 +11,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b; --color-accent-700:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -102,7 +103,7 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:32px 0 32px;">
 <a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
 <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Little Pig — Devlog</h1>
-<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a horror-stealth game jam, May–Jul 2025.</p>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Weekly production log for a horror-stealth game jam, May–Jul 2025.</p>
 <a href="./Production.dc.html#little-pig" style="font-size:14px;font-weight:600;">Read the case study →</a>
 </section>
 
@@ -129,7 +130,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w1" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 1</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Collaborative Design is the Name of the Game(Jam)<br>Today we talked about the strengths of the team and what we are passionate about when it comes to game development. Will has been inspired recently by horror and animals. In the ideation process we came up with the idea of slaughterhouse horror as combining the two. This was the seed from which the game Little Pig grew.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">As lead designer in this project I will be responsible for coming up with the details of the design in this coming week. I need to look at games like Bramble and Little Nightmares to see what manner of puzzle platformer we need to be looking at emulating.</p>
@@ -154,7 +155,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w2" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 2</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Spent the team collaboration session brainstorming ideas and agreeing on a scope for project. The ideation phase is my absolute favourite part of game development and we had a blast making a spiderchart on Miro to discuss our ideas for the game.</p>
 <div style="border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;margin:20px 0;"></div>
@@ -166,7 +167,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w3" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 3</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Level design scoping was the key focus of our efforts this week as a team, as no solid plan for what manner of environment we were to build/implement was forthcoming. I decided to grasp the nettle and lead the meeting on the topic. I went in with an agenda planned, which helped keep our collaboration on course and on task.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">As a matter of dividing up the design work Megan was tasked with coming up with a plan for one 'room' or the first 'environment' of an abattoir and I with the second room. Her task was the trickier, design-wise, in my opinion as the tutorial level is always one of the most thorny design problems -- how to telegraph things to a player without being overbearing.</p>
@@ -178,7 +179,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w4" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 4</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week our design collaboration has been aided by being in the same room again. We made use of the whiteboard as a communication tool. This was enormously effective, despite my extremely poor handwriting.</p>
 <div style="border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;margin:20px 0;"><img src="./assets/devlog-pig-7.png" alt="Megan and Loretta working out level mechanics on a whiteboard" style="width:100%;display:block;"></div>
@@ -190,7 +191,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w5" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 5</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week I've taken on the task of storyboarding the game flow so that programming can have a definitve graphical idea of how the game should look and feel at runtime.</p>
 <div style="display:flex;flex-direction:column;gap:12px;margin:20px 0;">
@@ -206,7 +207,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w6" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 6</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week saw my skills as Co-Lead of the Animal Farm team tested by a rupture between members. Megan and Will had a disagreement about the progress of the game art.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">My sense of the matter is that Will was unhappy about the fact that Megan had been using unofficial, informal channels to direct her criticism at him over the lack of progress on the 3D modelling that needs to be done by the time we pull things together for the first playable. We need a working player character and working animations -- if this is a first draft then so be it, we just need something. Will has been delaying this task over a lack of understanding of 3D modelling skills and techniques and would prefer to wait for his tutor to get to that subject in due course over the semester. He feels underappreciated and unfairly criticised about the quality of his work as an artist.</p>
@@ -218,7 +219,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w7" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 7</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week I made an impassioned speech to the team in favour of getting a first playable up and running. The whiteboxes have been made but we have been having issues with Github and the modelled whiteboxes have not been implemented into the programming that Jared has been working on.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I have some major concerns about the progress of the development. Megan has been extremely helpful in taking on extra art tasks and managing communication with the external artist responsible for producing the enemy Butcher character model.</p>
@@ -228,7 +229,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w8" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 8</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">At the beginning of the week we still had no first playable, but by the middle of the week onward we had identified the problem. It turns out that Jared had no idea at all that he was responsible for implementing the scripts he had written together with the assets created by Will and Megan (and external artist.) It seems that he assumed implementation would be done by the design team.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This was contrary to my understanding of the workload split. I had in the 4th week of development asked if Jared would like to pass on some of the implementation workload onto myself -- on the condition that he make a small video tutorial guiding the whole team through how he had organised the file structure (although to be fair he did write and excellent Technical Design Document.) I had been keen for him to explain how his code works because Megan and I are not as proficient at coding as he.</p>
@@ -237,7 +238,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w9" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 9</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Megan and I had a disagreement about down-scoping the project this week. Although the two of us clashed over that matter, it was resolved during the in-person team meeting where we opened the discussion up to the rest of the team. Collectively we decided to downscope two of the three areas of the game -- Room 1 and Room 3 -- in order to meet the necessary development milestones on time.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I led the 'downscoping' team meeting. It was largely successful and Megan thanked me for my professionalism on the way out which was a kind gesture. It never ceases to surprise me how much being empathetic makes for good leadership.</p>
@@ -248,7 +249,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w10" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 10</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week I wrote the marketing blurb for the itch.io page on which Little Pig is to be published. I also completed the design of the New User Questionnaire using Google Forms which is to be sent out to external playtesters.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The game is fully functional and working as designed which is a fulfilling thing to witness. The audio is still to be completed -- Chris encountered some hardware issues which we as a whole team are waiting to be fixed. As soon as the audio is in, we can start getting playtester feedback, which to me as a designer is incredibly exciting.</p>
@@ -259,7 +260,7 @@ a:hover{color:var(--color-accent-600);}
 <article id="pig-w11" style="padding:36px 0;border-top:1px solid var(--color-divider);">
 <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
 <span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 11</span>
-<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 18, 2025</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 70%, transparent);">Aug 18, 2025</span>
 </div>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">During the final team collaboration meeting we attempted to fix some serious design-breaking bugs that had cropped up in the aftermath of audio implementation. As designer I was very disappointed to see these programming issues crop up at such a late hour. Jared our programmer was not available to assist.</p>
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I am grateful nonetheless to the tireless tutors and dedicated team for trying to realise my design vision up until the very last minute. Alas no solution was forthcoming and I made the executive decision to publish with the bugs in place.</p>
@@ -268,7 +269,7 @@ a:hover{color:var(--color-accent-600);}
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Overall a successfull game jam!</p>
 </article>
 </section>
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>

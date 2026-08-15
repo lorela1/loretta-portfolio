@@ -11,21 +11,22 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
 :root{
-  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
-  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --color-bg:#e9e7e7; --color-text:#1c1720; --color-accent:#2e5c60; --color-accent-600:#24484b; --color-accent-700:#24484b;
+  --color-accent-2:#6d2e3a; --color-divider: color-mix(in srgb, #2a2632 15%, transparent);
   --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
 }
 body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
 a{color:var(--color-accent);}
-a:hover{color:var(--color-accent-600);}
+a:hover{color:#d4491f;}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
-.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
-.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:#faf8f5;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 21%, transparent);}
 .card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
 .sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
 .sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
 .sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links > a, .sidebar-group > a{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
 .sidebar-group{position:relative;}
@@ -102,7 +103,7 @@ a:hover{color:var(--color-accent-600);}
 <section style="padding:32px 0 32px;">
 <a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
 <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Bast — Devlog</h1>
-<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a solo hieroglyph-wordsearch visual novel, May–Aug 2026.</p>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 95%, transparent);">Weekly production log for a solo hieroglyph-wordsearch visual novel, May–Aug 2026.</p>
 <a href="./Design.dc.html#bast" style="font-size:14px;font-weight:600;">Read the case study →</a>
 </section>
 
@@ -277,7 +278,7 @@ a:hover{color:var(--color-accent-600);}
 <p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Some things stand out to me as I look back across 12 weeks of production.  My first reflection is that when working with multiple pieces of complex coded technology lateral thinking is your best friend. The weeks I struggled with PixelCrusher’s dialogue system could have been saved if only I had thought about the problem by stepping back – why was there any reason to be married to this piece of software? None, other than the fact that I’d already purchased it. As soon as I got over this hurdle of logic the solution was simple: just use another asset that can give you the effect you want – YarnSpinner. If only I had stepped back from the problem to look at it from a wider perspective I would have arrived at the solution much faster, instead of struggling to hack a tool that is not suited for the task.  My second reflection is that I got into trouble whenever I had no underlying understanding of how pieces of technology ‘worked.’ My struggles with the font boldness saga, for example, was hampered by the fact that when I began this project I didn’t fully understand what a font IS.  Without understanding what a font IS, in technical art terms I had no reference point as to how to fix a problem or how the different parameters that are given to that particular thing actually help. But once I understood what a font actually was, (it’s a series of vertices that are linked up to a shader, which is a piece of code) I was able to give each glyph the ‘padding’ that was needed to effect the design vision I needed.  This is a good lesson and habit to remember going forward – what you don’t know OR are doing for the first time will be a learning process. It will take some time.  Roll with it, don’t get frustrated. (It was a similar situation with the PixelCrushers/ hieroglyph unicode parsing blocker – I didn’t actually have any understanding of how these things worked, which hampered my efforts to solve the problem.) Finally, something that went well – during the later stages of the production I was advised to try out a new technology/method (using Claude Code in Visual Studio) instead of sticking to what I already knew (Claude Chat and copy pasting code in and out of that). I have to admit that it felt like black magic to try a new and marvellous development tool – but given the level of polish and professional finish that I was able to achieve by quickly adding visual effect sprites using Claude Code, that pivot in using a different method has been an absolute godsend. This is something I will be taking into future game production efforts – if you have technology that can do something faster and easier, take advantage of it. Obviously vibe coding has its limitations, but for the purposes of rapid prototyping it is pretty close to perfect: it’s not client-facing, it’s a video game, so it’s a low stakes use case that makes sense and enhances communicating a design vision, and most importantly it enables game designers of ‘fail, but faster.’ Using Claude Code means less time and money wasted on making game mechanics that aren’t good because you can build prototypes to try them out incredibly quickly.  Overall Bast was a satisfying project in which I learned much and achieved some. Onward to bigger things!</p>
 </article>
 </section>
-<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">
 <span>© Loretta Lok</span>
 <div style="display:flex;gap:20px;">
 <a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
