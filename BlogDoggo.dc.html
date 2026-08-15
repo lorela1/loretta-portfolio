@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
+:root{
+  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
+  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-600);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
+.sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
+.sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
+.sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
+.sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
+.sidebar .btn{margin-top:24px;}
+@media (max-width: 860px){
+  .sidebar{position:static;width:auto;height:auto;border-left:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
+  .sidebar-brand{margin-bottom:0;margin-right:auto;}
+  .sidebar-links{flex-direction:row;gap:18px;margin-bottom:0;}
+  .main-with-sidebar{margin-left:0 !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="sidebar">
+<img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
+<a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
+<div class="sidebar-links">
+<a href="./Home.dc.html">Home</a>
+<a href="./Production.dc.html">Production</a>
+<a href="./Design.dc.html">Design</a>
+<a href="./CV.dc.html">CV</a>
+<a href="./Blog.dc.html" aria-current="page">Devlog</a>
+</div>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">itch.io ↗</a>
+</div>
+
+<div class="main-with-sidebar" style="margin-left:220px;max-width:760px;padding:0 clamp(20px,5vw,64px);">
+
+<div style="margin:32px -1px 0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);aspect-ratio:16/6;">
+<img src="./screenshot-2024-08-04-150751-msuaz2qy-499j.png" alt="Doggo Detective" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+
+<section style="padding:32px 0 32px;">
+<a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
+<h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Doggo Detective — Devlog</h1>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a cozy detective game jam, May–Aug 2024.</p>
+<a href="./Production.dc.html#doggo-detective" style="font-size:14px;font-weight:600;">Read the case study →</a>
+</section>
+
+<section style="padding:8px 0 8px;border-top:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:24px 0 12px;">Entries</span>
+<div style="border:1px solid var(--color-divider);border-radius:4px;padding:8px 24px;margin-bottom:8px;">
+<div style="display:flex;flex-wrap:wrap;gap:2px 28px;padding:16px 0;">
+<a href="#doggo-w1" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 1</a>
+<a href="#doggo-w2" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 2</a>
+<a href="#doggo-w3" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 3</a>
+<a href="#doggo-w4" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 4</a>
+<a href="#doggo-w5" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 5 & 6</a>
+<a href="#doggo-w6" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 7</a>
+<a href="#doggo-w7" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 8</a>
+<a href="#doggo-w8" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 9</a>
+<a href="#doggo-w9" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 10</a>
+<a href="#doggo-w10" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 12</a>
+</div>
+</div>
+</section>
+
+<section style="padding:8px 0 40px;">
+<article id="doggo-w1" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 1</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Designing a Cosy Game about a Police Dog for an Indie Game Jam</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Having spent a week researching and playing detective games, the following things stand out to be as sources of inspiration:</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">There are three types of detective games. There are deduction games that test witness' statements against each other to weigh the truth (very similar to cross examination in court, eg games like Ace Attorney.) There are games that give you too much data and ask you to sort out the relevant from the irrelevant. And finally there are deduction games where you're given all the relevant information and asked to draw conclusions. I really loved playing Detective Grimoire, which had a unique way of inputting the 'aha!' moment. Using a kind of 'slot machine visual', it allowed the player to input quite complex conclusions.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-1.png" alt="Screenshot of the conclusion input mechanism from Detective Grimoire, a point and click adventure game" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I'd really like to include a similar mechanic into the game that I design.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">2. Old Hong Kong police movies. Something about the old khaki green colonial era uniforms, with the absolutely ridiculous woolen knee socks for a 40 degree celsius East Asian summer monsoon. I wanted to design a Hong Kong nostagia game that was cozy and safe feeling, and for me that is my childhood media.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-2.jpg" alt="Acto Andy Lau in a police uniform holiding soy sauce. Can't get more Hong Kong than that." style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">3. Cozy games with animals as protagonists. Games like Stray, Untitled Goose Game and Little Kitty, Big City are immensely popular, aren't they! People love playing animals. Combing animals, nostalgia and deduction puzzles = Detective Doggo!</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-3.png" alt="Not gonna lie -- this image comes from Week 12 of the project but honestly I am so darn proud of the modeling that LY our team's artist has done for the protagonist Sammo the Police dog, named after the brilliant Hong Kong martial artist and actor Sammo Hung" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">And so it came to be that I pitched a dog detective game to my team of game developers, the majority of whom voted for this game concept above all others. I won't go into the details of the design here, as this is a blog about the development as a whole, and there's always the Game Design Document to reference for all that. But suffice to say that I loved writing the Game Design Document and it seemed to do a sufficient job at communicating the idea to the team. My major disappointment is that we are not likely to build and implement all of the features that I had envisioned for it. JP our producer was keen to limit the scope to a manageable level. Not and unwise move, but it was a disappointment nonetheless.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Obviously I am thrilled anway and looking forward to seeing my ideas come to fruition!</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Preparation is key when preparing a game pitch -- have specifics ready at hand to answer questions. Do not pitch an idea in generalities!</p></div>
+</article>
+<article id="doggo-w2" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 2</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Agile Methodolgy</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The Agile method for software development emphasises the making of a working product over paperwork. However I think it's worth documenting the humourous way in which our producer JP helped break the ice. Not all of us have been a part of a 'scrum' before so we engaged in a practice one in which we are all engineers and/or researchers at a turning-stone-into-gold facility. I can recommend it as a fun, enjoyable method for introducing the practice of scrum meetings to a newly formed team of developers.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Thursday afternoon was spent with artist LY explaining the inspiration behind the game's environment and character design. She and I made heavy use of a Miro board to communicate our ideas. I have a good rapport with LY having worked with her previously and I was thrilled that she came up with some great ideas for the game's opening cutscene.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-4.png" alt="Screenshot of our Miro board showing visual research, forming a kind of 'Art Bible' for the game graphics design" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I also asked the whole team to spend some time playing Untitled Goose Game as inspiration for what I'd like the game to look like. Whilst trained police dogs are obviously very well behaved I still want the player-protagonist to have some cheekiness and character! Hopefully they come back next week with lots of interesting inspiration for sound design and gameplay. The way I like to run a game design team is to allow people as much creative licence as possible, to trust them as much as possible. My belief is that this brings out the best in people and allows the most interesting ideas to emerge.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Use of visual aids such as Miro and a whiteboard are absolutely essential to collaborative game development. Team rapport can be built with humorous team building exercizes and this is essential in the development of a good collaborative environment of trust and communication.</p></div>
+</article>
+<article id="doggo-w3" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 3</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Easing into Production</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">JP our producer is very against the KanBan method or any kind of paper planning of the project whatsoever. I pushed back against this and insisted that we have a Trello board to keep us up to date with who is doing what. I lost my battle with him to have a Gantt chart illustrate our work co-dependancies because 'he hates Gantt charts' and I was reluctant to make him do something he didn't enjoy. [In later weeks I come to regret this. It is my firm belief that if we had planned production better, we could have got more features and more polish to the game, but hey ho, learning process.]</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Met with LY again on Thursday to talk about the scope of the artwork and where we are at in terms of splitting the art tasks between the two of us. LY will be doing the textures/materials and I will be doing the wireframes. This makes sense because we want to have all of the textures on as few ‘sheets’ as possible to optimise the shader usage of computing power. Also she is in fact the more experienced and better artist.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">LY and I agreed that we should focus on the Handwriting Photography part of the game, with the environment and vegetable stall as our No. 1 Priority as the programming part of the development is somewhat dependent on this. As a nice ‘extra’ we could look into animating some of the chickens in the live chicken stall to add more interest and movement into the scene, but that will be a stretch goal.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">We also did a quick storyboarding session on a whiteboard in the back room with our mentor TQ in attendance to comment and give advice. TQ questioned the addition of the ‘rhythm game’ element into the game, which I defended as the game designer – I want the game to very much be the experience of {Being A Naughty Dog, who is Trying Really Hard to reform and become a Good Boi}. There needs to be some form of challenge beyond a basic puzzle game in order to get this feeling across to the player.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">My feeling is that the rhythm minigame portion still needs to be refined, which I am planning on talking to LR and KB about on Monday. They will be doing that part of the game and I want to talk to them about the art and animation that might need to be supplied for that.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-5.png" alt="A screenshot of the incriminating hate graffiti -- 'snakeheads' was a derogatory term for the vietnamese refugees that come to Hong Kong during the war at the time" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-6.jpg" alt="Terrible photograph of storyboard that served us, well enough" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">In later weeks, I learn that I should have pushed back much harder on the 'no Gantt charts' issue. I really think some kind of production planning that is visual to the whole team would have kept us more accountable to each other.</p></div>
+</article>
+<article id="doggo-w4" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 4</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 4, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Producer JP away this week. I lead the scrum meeting and it went as expected. People seem to know what they are doing, using the Trello and the design documents.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">All of us got some support in down-versioning our project in Unity to a 2022 version in order to be able to use the Quibli toon shader asset. [ This is a shader asset that I bought and paid for from the Unity asset store ages ago, and never used for anything but now is the perfect tool for making our cozy game!] We spent some time fiddling with the shader settings and making it look 'right' for our game's 'look'.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">All the game jam teams got reminded by our mentor HH to optimise our game throughout the development process. She suggested using the ‘stats’ button in the top right corner of the ‘scene’ view in Unity to keep track of the number of calls on the GPU. I've prodded our programmers about this but I'm not sure this message got through to them very well. They all seem very shy and reluctant to talk to either me or JP or the rest of the team, so it's hard to guage their progress.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I will work on modelling the Dry Goods Shop this week. I believe that having a classic Hong Kong dry goods stall in the scene will give the whole scene an authentic look. I have bought a course on Udemy and will spend the time picking it up again, rather than using Maya because I found Maya difficult.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I feel like getting GitHub working for everyone was a major win for the whole team this week.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">It's important to celebrate wins as a team, no matter how small, because small teams that make indie games thrive on morale. Positive energy encourages creative work.</p></div>
+</article>
+<article id="doggo-w5" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 5 & 6</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week I missed two project sessions due to Covid and Covid recovery.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I havent had much of a chance to look at work done by colleagues in the last two weeks but I did ask JK to re-do the programming of the crate puzzle mechanics as I thought his solution was a bit overengineered.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The only artist on our team LY has done an amazing job at the low poly models and I am beginning to think that there's no point in me 'helping' with that task when my time could be more usefully directed at getting the gameplay programming up and running. The programming team of 4 have not been good at working together thus far and its worrying that there is no scene in which they have tested their mechanics against each others'. WW and LR especially could benefit so much from working together as they are both programming the navigation of NPCs and should be devising the navmesh together. And yet they are not which I can see will be a bigger problem the longer the project goes on.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">None of the team members except for LY seem to be keen on using the Trello board to inform each other of progress. This will be something to investigate in the post mortem, I feel.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">When does a tool like Trello become a burden rather than an aid? Why were we using discord to inform each other of our progress rather than Trello? I think it's possible our team is too small for Trello to make sense? Big questions for the post mortem later on, but I think the answer is along the lines of JP our producer didn't encourage its use, and it therefore failed as a team accountability checker, communication tool and motivator. Without the human element, all tools will fail.</p></div>
+</article>
+<article id="doggo-w6" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 7</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Pulling the Team out of Development Slump</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Almost all projects have a middle slump where people aren't feeling the urgency of the deadline but have gone way past the keen and excitement beginning it. The finish line is nowhere in sight. Progress feels glacial.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">JP and I spent the project session on Monday trying to inject some much needed sense of urgency into the team to limited success. There were many co-dependencies in this phase of the implementation, which hampered our progress. Whilst trying to combine the animations with the navigation AI on one of the game's NPCs, WB and I were stopped in our tracks because one of LY's animations were in the wrong format. Not going to lie -- I was frustrated.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">It was agreed that I would support KB for a few hours on Thursday doing the WWise implementation into Unity. We found out that WWise does not export to WebGL build and this was also very frustrating for me as the Game Designer as I had hoped to get as many people to playtest the game as possible. I did some research on this -- the WebGL supported version of WWise does exist but is not publicly released. Perhaps in future projects we could phone up the people at WWise and ask for a pre-release copy!</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Plan ahead to mitigate work co-dependencies. To be fair I begged JP to make us a Gantt chart but he drinketh too deeply of the 'anti-paperwork' kool-aid of Agile methodology. Also, think about the audience that you want to reach before reaching for middleware like Wwise. The more middleware you use the more complications can spring up, unexpectedly, as each software will have its own limitations and requirements!</p></div>
+</article>
+<article id="doggo-w7" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 8</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Slamming the Big Red Button</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Our producer J has been on the warpath. We have no first playable, nothing even close. There was disgruntlement regarding his tone of voice, but nobody denied that his message was sound.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Team members are too shy, even after months of developing the game together, and still not keen on either talking to each other. To combat this, we wrote a task list on the whiteboard -- it worked surprisingly well to make the monumental seem surmountable. People approached the whiteboard, wrote notes on it and pointed at it whilst discussing things. Having a whiteboard list we were able to make marks on also helped highlight work inter-dependancies. Awareness that some tasks cannot be done until other's work has been completed AND implemented showed team members the absolute necessity of being in touch with each other about their progress.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">A surprising amount of leadership is just tapping people on the shoulder and getting them to talk to one another.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">At the end of the project session, still no first playable that includes ALL the features, but leaps and bounds ahead of where we were that same morning, which feels like a relief.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Small changes to team working practices can make a big difference. Try making the Kanban an actual physical Kanban! Try out different tools to solve problems!</p></div>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-7.png" alt="the image of our whiteboard task list is in fact from week 9 of development, not this week, but the point stands" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+</article>
+<article id="doggo-w8" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 9</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Grim Fatigue</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Have you ever heard of the concept of 'Grim Fatigue'? It's a phrase that I associate with watching Attack on Titan, the anime series. It boils down to -- if you're trying to convey a sense of fear, dread, danger or emergency it does not do to overdo it.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">And that's where we found ourselves as a team, one week on from our producer's big telling off. I don't think he had it in him to do another grim faced dressing down and the team didn't have it in them to take another either. So we were at an impasse. Yes there is some serious urgency but no we can't really get more mad at each other about it, we just have to grind on with the work.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">To that end I have used again this week a physical, real, meatspace-not-cyberspace Kanban to illustrate the most serious bugs and most urgent tasks. I actually found it helped us as a team to have something to point to, a list to tick off and mark with DONE. A nice cathartic boost once in a while in the long afternoon. Not that I don't enjoy my role as game designer and team leader -- watching your brainchild turn into something real and playable has been a joy and an honour. I have the trust of a wonderful team of skilled creative people who have bought into my humble concept. But it's been a long 9 weeks and we all need a boost every now and again.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I will spend Thursday with KB doing the sound. I feel she has some anxiety around Github and I wanted to give her support on that, as well as guidance on the tone and feel of the cozy music that she has been working on under her own steam until now. We listened to several examples of game theme music and took inspiration from the jazzy tone of the soundtrack of the game Little Kitty, Big City. We agreed that the first draft of her theme music was too 'childish' and we wanted to appeal to a wider audience of players than just children. This is definitely the part of game design that I like the most -- collaborating with others and guiding them in my vision of the game. Second only to seeing the whole game come together at the end of the process!</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Hopefully we will pull an MVP build together by the end of the week to be able to QA test.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">When team energy is low, it is your job as leader to keep it up. Talk to your team individually, address their concerns individually.</p></div>
+</article>
+<article id="doggo-w9" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 10</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 2, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Minimum Viable Product -- A Significant Milestone for Team Doggo</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">We managed to pull a minimum build together middle of last week and some of the QA testing has begun. This was a small win that we celebrated as a team!</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The testing is showing that many players failed to 'get' that their task was to solve an environmental puzzle involving pushing a crate to the right place, jumping on top of it, and then barking in order to ask the photographer to take a picture of them with the suspect's handwriting in the background of the picture.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I went and edited the text introduction cutscene of the game to make it more clear to the player what they were supposed to be doing. The test results that came in after that edit were saying that nobody was reading the text, still, and that everyone was clicking 'continue' and ignoring the instructions. Players, eh?</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">But on a more serious note, as the game's designer this IS a problem. My problem. I have some solutions in mind, including adding a particle effect or glow to the crate itself, or some sort of area-triggered textual clues to guide the player to the right place in front of Mr. Koo's vegetable stall.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-8.png" alt="In later weeks we did find some extra time to add a particle effect to the crate that the player is supposed to push into place, the crate 'snaps' into place as well so that player knows they have 'succeeded' -- we made sure that the particle effect is not a colour, too: that way it is more accessible to colourblind people." style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">More concerning to me was the fact that nobody really clocked that PC Andy Wong is a Hong Kong police officer from the 1970s. If we had more time and more artists I would have pushed harder for the environment and character design to be more clearly Sai Kung in Hong Kong, but as it was LY our only artist was already too busy. Instead I focused on getting a minimum viable product with all the gameplay in place, and getting the art to convey a cozy feeling rather than look exactly like Sai Kung. In future builds perhaps we will give the art a more distinct look.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Players don't like big blocks of text. Don't make them read, it's boring and they just want to get to the bit where they can be a cute police dog immediately.</p></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I also had a difficult conversation with team member P who has been consistently terrible at progressing his part of the project. Unfortunately for me I had to have the same conversation with P three times before he understood that it was likely his work would not be included in the final build, and that he had been relegated to doing playtesting/QA. JP (our producer) and I (game designer) as team leaders decided at some point that we would build in some redundancy by asking another programmer to take on that same work as had been assigned to P in case P did not deliver. As it turned out, we were right, although we really didn't want to be.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">A tutor/mentor overhearing that difficult conversation commented that I had handled it well -- firm but fair. I wonder if this could have been avoided had JP (producer) and I been more firm with him earlier in the semester. We had an unspoken policy that people who didn't or couldn't deliver on their promises would be relegated to lesser less critical tasks, or to QA testing work. I think perhaps we should have made that policy plain and open, to avoid misunderstanding.</p>
+<div style="border-left:2px solid var(--color-accent);padding:4px 0 4px 16px;margin:20px 0;"><div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:4px;">Learnings</div><p style="margin:0;font-size:15px;line-height:1.6;">Should have tried to deal with problematic team member earlier on. Different people need different kinds of oversight.</p></div>
+</article>
+<article id="doggo-w10" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 12</span>
+<span style="font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent);">Aug 1, 2024</span>
+</div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">During our final team meeting we had a group post mortem. This journey has not been without its hurdles but honestly I remain incredibly proud of what the team has achieved over the course of the last three months.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The prototype is of course not finished and could still benefit from a lot more polishing and tweaking. I wrote a list of tasks on the whiteboard and guided the allocation of the work in the following week leading up to the August 5th deadline -- we're still doing project sharing semi-caveman style where each member of the team checks out the project on Github, works on it one day of the week, and then pushes their changes before handing the branch off to the next team member.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Team Post Mortem</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Communication in the Programming Department was Poor</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">At the risk of sounding like I'm on a high horse -- although, there really is no escaping the fact that I am very much a Mature Student surrounded by young adults -- many of the communication problems would not have been relevant if I was working with experienced programmers. And it really was the programmers who had an issue with reaching out to each other and communicating. Some of it was shyness, some of it was inexperience but some of it was attributable to myself as well: as Game Designer and Chief Technical Officer I regret not picking up on this earlier and pushing the issue back in week 4 or 5. Communication didn't really pick up until week 7 or 8 and by that time it felt like there was a good chance we wouldn't be able to succeed in our aim of getting an MVP complete by Week 10.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Related to the lack of communication, nobody took any notice of the agreed upon conventions and practices in the Technical Design Document. Nor did most of the team make good use of the Trello board throughout the entire development of the game. I guess I'd like to know what makes the use of a tool more like an aid and less like yet-another-admin-task? Right now, vis-a-vis task assignment, we are using a poorly improvised system where I go on discord and connect people to tasks as they come up. Then I prod people until they tell other people that their task is done, and the next person can do their task. Wasn't the Trello board supposed to cut through all of this and make our lives easier? How come it didn't?</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">2. Agile Methodology was Poorly Implemented</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Dovetailing to issue no. 1 there was no concerted effort to apply the Agile method to our practices as I had expected there to be. Again, this weakness of effort could at least in part be attributed to myself -- as a team leader I could have pushed, early and often, for a much more structured approach to recording progress during each sprint, to reflecting and improving our working practices with each week's iteration.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The lack of real record keeping and weekly reflection hampered our efforts to become a better team inside of the 12 weeks we were given for the development of Doggo Detective. The producer's devlogs especially were in such a parlous state that nothing of substance could be gleaned from them. Then of course, there was the task of filling in ALL of the whole-team devlogs at the END of the whole development. Not least because they were based on such lousy notes, it then made the whole practice into a farce of paperwork* production, rather than actual good management practice and iterative collaboration improvement.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">*IF you detect a slightly resentful tone you would be correct in surmising that yours truly did in fact have to retroactively produce hours and hours of paperwork, and did not enjoy a second of it.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">3. The Emergent Qualities of Group-led Game Design</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">What I really love about game jams and game development in general is how wonderful ideas for game features spring up out of the minds of my fellow team members without being prompted.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">That said, I noticed that these emergent design ideas -- such as adding the quest checklist box to the UI, or the pawprint curser -- didn't emerge until we had a first playable. It is so much more difficult to imagine in the complete absence of anything! The lesson learned here is to get a first playable made as soon as possible because your team will surprise you with good ideas, but they need and assist. No playable, no ideas.</p>
+<div style="position:relative;border:1px solid var(--color-divider);margin:20px 0;aspect-ratio:16/10;"><img src="./assets/devlog-doggo-9.jpg" alt="one of the emergent design ideas that I am most proud of came from WW and KB who added the polaroid photo screenshot of Sammo to the end screen" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Personal Post-Mortem</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Reflecting on my personal development as Game Designer and Team Leader over the course of the last 3 months of making Doggo Detective has brought home the following:</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Listen to your subject matter experts<br>It's okay to make mistakes, but honestly I would have made fewer if I doubted them less and trusted them more. Communicate with them about your concerns because when you're at an impasse only communication will solve your problems.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">2. Don't make assumptions that you will later regret<br>In the future I want to question the difference between trusting team members to do their work and me not being vigilant enough to check their work. Am I trusting them, or am I just being a bit too passive because it's easier to say nothing? Even for a consumate extrovert such as myself communicating IS effort. There's something in between micromanagement and blind trust that would have been appropriate countless times throughout. I missed those opportunities to make our project and our collaboration better, which I do regret.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Ending on a Positive Note</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Many testers loved our prototype and are keen to see Doggo Detective developed further! I couldn't be more pleased to see my initial vision turned into a working prototype.</p>
+</article>
+</section>
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<span>© Loretta Lok</span>
+<div style="display:flex;gap:20px;">
+<a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener">itch.io</a>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

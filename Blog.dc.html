@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
+:root{
+  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
+  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-600);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:26px;background:transparent;}
+.card-title{font-family:var(--font-display);font-size:20px;margin-bottom:8px;}
+.card-body{font-size:14px;line-height:1.6;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0 0 16px;}
+.sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
+.sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
+.sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
+.sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
+.sidebar .btn{margin-top:24px;}
+@media (max-width: 860px){
+  .sidebar{position:static;width:auto;height:auto;border-left:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
+  .sidebar-brand{margin-bottom:0;margin-right:auto;}
+  .sidebar-links{flex-direction:row;gap:18px;margin-bottom:0;}
+  .main-with-sidebar{margin-left:0 !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="sidebar">
+<img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
+<a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
+<div class="sidebar-links">
+<a href="./Home.dc.html">Home</a>
+<a href="./Production.dc.html">Production</a>
+<a href="./Design.dc.html">Design</a>
+<a href="./CV.dc.html">CV</a>
+<a href="./Blog.dc.html" aria-current="page">Devlogs</a>
+</div>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">itch.io ↗</a>
+</div>
+
+<div class="main-with-sidebar" style="margin-left:220px;max-width:760px;padding:0 clamp(20px,5vw,64px);">
+
+<section style="padding:64px 0 48px;">
+<span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent-700);margin-bottom:16px;">Development Blog</span>
+<h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(36px,5vw,52px);line-height:1.05;margin:0 0 20px;">Devlogs</h1>
+<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production logs, written during development. Pick a project below.</p>
+</section>
+
+<section style="padding:0 0 60px;border-top:1px solid var(--color-divider);">
+<div style="display:flex;flex-direction:column;gap:20px;margin-top:32px;">
+
+<a href="./BlogBelt.dc.html" style="text-decoration:none;color:inherit;display:block;">
+<div class="card" style="display:flex;gap:20px;align-items:center;padding:16px;">
+<div style="width:96px;height:96px;flex-shrink:0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);">
+<img src="./screenshot-2026-02-12-062537-msub00fe-cwp0.png" alt="Sinner's Belt" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div>
+<div class="card-title" style="margin-bottom:6px;">Sinner's Belt</div>
+<p class="card-body" style="margin:0 0 8px;">11 weeks · Academic AAA capstone, Sep–Dec 2025 · ~20-person team, two campuses</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the devlog →</span>
+</div>
+</div>
+</a>
+
+<a href="./BlogPig.dc.html" style="text-decoration:none;color:inherit;display:block;">
+<div class="card" style="display:flex;gap:20px;align-items:center;padding:16px;">
+<div style="width:96px;height:96px;flex-shrink:0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);">
+<img src="./screenshot-2025-07-21-103955-msuazjfn-wed9.png" alt="Little Pig" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div>
+<div class="card-title" style="margin-bottom:6px;">Little Pig</div>
+<p class="card-body" style="margin:0 0 8px;">11 weeks · Horror-stealth game jam, May–Jul 2025 · Team of 6</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the devlog →</span>
+</div>
+</div>
+</a>
+
+<a href="./BlogDoggo.dc.html" style="text-decoration:none;color:inherit;display:block;">
+<div class="card" style="display:flex;gap:20px;align-items:center;padding:16px;">
+<div style="width:96px;height:96px;flex-shrink:0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);">
+<img src="./screenshot-2024-08-04-150751-msuaz2qy-499j.png" alt="Doggo Detective" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div>
+<div class="card-title" style="margin-bottom:6px;">Doggo Detective</div>
+<p class="card-body" style="margin:0 0 8px;">10 weeks · Cozy detective game jam, May–Aug 2024 · Team of 8</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the devlog →</span>
+</div>
+</div>
+</a>
+
+<a href="./BlogBast.dc.html" style="text-decoration:none;color:inherit;display:block;">
+<div class="card" style="display:flex;gap:20px;align-items:center;padding:16px;">
+<div style="width:96px;height:96px;flex-shrink:0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);">
+<image-slot id="port-bast-hero" shape="rect" placeholder="Bast key art" style="width:100%;height:100%;"></image-slot>
+</div>
+<div>
+<div class="card-title" style="margin-bottom:6px;">Bast</div>
+<p class="card-body" style="margin:0 0 8px;">12 weeks · Solo hieroglyph-wordsearch visual novel, May–Aug 2026</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the devlog →</span>
+</div>
+</div>
+</a>
+
+</div>
+</section>
+
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<span>© Loretta Lok</span>
+<div style="display:flex;gap:20px;">
+<a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener">itch.io</a>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

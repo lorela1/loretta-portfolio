@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
+:root{
+  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40; --color-accent-700:#334d40;
+  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif; --font-heading:var(--font-display);
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-600);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
+.sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
+.sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
+.sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
+.sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
+.sidebar .btn{margin-top:24px;}
+@media (max-width: 860px){
+  .sidebar{position:static;width:auto;height:auto;border-left:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
+  .sidebar-brand{margin-bottom:0;margin-right:auto;}
+  .sidebar-links{flex-direction:row;gap:18px;margin-bottom:0;}
+  .main-with-sidebar{margin-left:0 !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="sidebar">
+<img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
+<a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
+<div class="sidebar-links">
+<a href="./Home.dc.html">Home</a>
+<a href="./Production.dc.html">Production</a>
+<a href="./Design.dc.html">Design</a>
+<a href="./CV.dc.html">CV</a>
+<a href="./Blog.dc.html" aria-current="page">Devlog</a>
+</div>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">itch.io ↗</a>
+</div>
+
+<div class="main-with-sidebar" style="margin-left:220px;max-width:760px;padding:0 clamp(20px,5vw,64px);">
+
+<div style="margin:32px -1px 0;border-radius:4px;overflow:hidden;border:1px solid var(--color-divider);aspect-ratio:16/6;">
+<image-slot id="port-bast-hero" shape="rect" placeholder="Bast key art" style="width:100%;height:100%;"></image-slot>
+</div>
+
+<section style="padding:32px 0 32px;">
+<a href="./Blog.dc.html" style="font-size:13px;">← All devlogs</a>
+<h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,5vw,44px);line-height:1.1;margin:20px 0 8px;">Bast — Devlog</h1>
+<p style="font-size:16px;line-height:1.6;margin:0 0 24px;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Weekly production log for a solo hieroglyph-wordsearch visual novel, May–Aug 2026.</p>
+<a href="./Design.dc.html#bast" style="font-size:14px;font-weight:600;">Read the case study →</a>
+</section>
+
+<section style="padding:8px 0 8px;border-top:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:24px 0 12px;">Entries</span>
+<div style="border:1px solid var(--color-divider);border-radius:4px;padding:8px 24px;margin-bottom:8px;">
+<div style="display:flex;flex-wrap:wrap;gap:2px 28px;padding:16px 0;">
+<a href="#bast-w1" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 1</a>
+<a href="#bast-w2" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 2</a>
+<a href="#bast-w3" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 3</a>
+<a href="#bast-w4" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 4</a>
+<a href="#bast-w5" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 5</a>
+<a href="#bast-w6" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 6</a>
+<a href="#bast-w7" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 7</a>
+<a href="#bast-w8" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 8</a>
+<a href="#bast-w9" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 9</a>
+<a href="#bast-w10" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 10</a>
+<a href="#bast-w11" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 11</a>
+<a href="#bast-w12" style="font-size:14px;padding:4px 0;color:var(--color-text);">WEEK 12</a>
+</div>
+</div>
+</section>
+
+<section style="padding:8px 0 40px;">
+<article id="bast-w1" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 1</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Game Design</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The problem that I needed to solve in the early stages of the design process was the fact that, as a production team of one single developer (myself) I have to look at my limitations and make the best of what I have. My strengths are: Unity Developer Experience and Writing. I therefore settled on the idea of making a visual novel – which I thought was a programmatically simple enough project (my programming skills are relatively lacking) and achievable in the given timeframe whilst also playing to my strengths as a narrative designer and writer.  I was inspired by ‘button cat’ videos that I have seen online of cats using ‘speaker buttons’ to speak to their human compatriots. I based the design of Bast around this – the concept of cross-species communication, but writ large on a story about the untimely death of an Ancient Egyptian Priestess-Princess, trying to talk to her living family members as a re-incarnated Temple Cat.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Wrote a High Level Game Design Document to use throughout the course of the development.</li>
+<li style="margin-bottom:6px;">Did Research on Art Styles in comparable narrative games.</li>
+</ul>
+</article>
+<article id="bast-w2" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 2</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Production Planning</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">This week was all about carefully planning the production timeline for the making of a prototype. I set myself the aim of producing a 10 minute long gameplay vertical slice, in order to demonstrate the tone and flow of the story that I was to create.  In order to make the most of the limited 12 week timeline for production, but ALSO achieve a high level of polish and professional ‘look and feel’ for the prototype, I decided to make heavy use of AI tools such as ChatGPT for the 2D backgrounds and character sprites, Claude AI for the coding and Suno AI for the music. Using AI tools is now common in industry for designers to rapidly produce prototypes to communicate their design vision. Whereas there is some consumer pushback against AI art I think in the case of making a game prototype I regard all of these as placeholder assets that will allow a full production team to understand the feeling of my game’s design earlier on in the production pipeline.  Another thing I planned for the production was to use a branching dialogue management plug-in asset – the PixelCrushers dialogue system to manage the lines of story the game was to deliver. I decided this on the basis that production time is limited and I needed an off-the-shelf time-saver that would allow me to focus on gameplay and game feel rather than programming.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Built a Gantt chart (which you may view here: Gantt chart -- Bast  ) to track the progress of the production.</li>
+<li style="margin-bottom:6px;">Build a Trello Page and populated it with as many tasks as I could envision at this stage of the production (which you can view here : https://trello.com/b/buYSeffj/gam601bastprototyping )</li>
+<li style="margin-bottom:6px;">Wrote the High Level Plot Design Document with all the relevant dialogue.</li>
+</ul>
+</article>
+<article id="bast-w3" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 3</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Production Begins</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The project started quite smoothly as I built the cell-and-grid wordsearch puzzle. Because I wanted the puzzle to be repeated across about a dozen different interactions, it was important to the design of the game that this core puzzle gameplay was scalable and re-usable.  I approached the building of the prototype by starting on the part I thought would be the most difficult – linking up the answering of the hieroglyph wordsearch puzzle to a dialogue-based multiple-choice answer system.  It was at this point that I came up against a hard blocker: PixelCrushers' dialogue editor had a limitation where it did not have the capability to pass through hieroglyphic puzzle answers through its Lua based logic system. I struggled a lot with trying various different workarounds that continued to fail to achieve the effect that I wanted. The problem centers around the fact that I absolutely need the game system to use hieroglyph fonts as a way to ‘set’ each puzzle as they come up in game – I need that flexibility and scalability.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Started making 2D game art sprites using the daily free limit on ChatGPT.</li>
+<li style="margin-bottom:6px;">Built the GridManager — the script that would go on to run the wordsearch puzzle grid for the rest of the project</li>
+<li style="margin-bottom:6px;">Imported the Pixel Crusher Dialogue System as my first attempt at a dialogue engine.</li>
+<li style="margin-bottom:6px;">Built out actual dialogue “nodes” and wired up a wordsearch trigger node inside that system, and by the end of the day I had a first working prototype — core puzzle scaffolding and a functioning (if rough) dialogue trigger in place.</li>
+</ul>
+</article>
+<article id="bast-w4" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 4</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Pivot to using YarnSpinner</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I brought the problem of PixelCrusher’s inability to parse hieroglyph authoring to my game development mentors to see if they had any solutions they could think of. One of my mentors is a skilled programmer and suggested that instead of trying to figure out how PixelCrushers was parsing hieroglyphs I could code something from scratch instead. This got me to thinking that there was actually no real need to use the PixelCrushers dialogue management system if it wasn’t working for the needs of the project. I did some research on the other assets available on the market that are available and came across a free asset YarnSpinner which is a ‘less good’ tool from a branching narrative design perspective since it doesn’t have a visual ‘tree diagram’ type of interface, but could actually handle hieroglyphs in-line, which I consider critical for this prototype. I weighed the pros and cons and decided that on balance it was more important to have a puzzle and dialogue authoring system that was integrated and hieroglyph-friendly, over and above an easy interface, at least for the purpose of making a 10-minute vertical slice. If we took this project and completed it I would probably request programmers make an authoring tool that had both those things – a visual scripting type interface AND hieroglyph parsing capability but for the size and aim of the current prototype this would be overengineering.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Adding and arranging background art using the Unity 2D system. Learned a lot about how the hierarchy works inside of Unity to render things in order. [Rendering order is top to bottom in the hierarchy but INSIDE of each hierarchy object it is BOTTOM TO TOP. It makes no sense!]</li>
+<li style="margin-bottom:6px;">Backgrounds now fade in and out between night time and day time scenes.</li>
+</ul>
+</article>
+<article id="bast-w5" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 5</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Wrestling the Text Mesh Pro Dialogue Box</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The hieroglyph font continues to bring up problems for the project. It is the most ‘custom’ part of the design, not seen or used frequently in other puzzle games and word games, so I am unsurprised that it's the area that has thrown up the most issues.  I was trying to arrange it so that two different fonts could be displayed side by side in the dialogue box. English words next to Egyptian hieroglyphs. The solution that I arrived at was to get a “fallback font” system working inside TMP. This was how I managed to put glyphs next to text, make authoring easy AND not have to hard copy-paste in individual sprites in the long run. I considered it worth the hassle.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Problem-solved: a way to ‘lock’ the dialogue behind the puzzle gameplay – player has to solve the grid before the dialogue is allowed to advance. Claude AI suggested something wildly over-engineered, which reminds me that it’s important to always check its answers and use your own creativity because AI tools can be a bit misleading in the way they ‘think’ about problems. They are good tools, but they have biases which you have to get used to.</li>
+<li style="margin-bottom:6px;">Continued to use my free ChatGPT tokens to make 2D character sprites for the game. Have found that Gen AI art suffers from a ‘memory’ issue in that it struggles to keep to the same art style as you ask it to do further edits to the same art. For the purposes of this project I judged this to be a minor issue and good enough for a prototype.</li>
+</ul>
+</article>
+<article id="bast-w6" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 6</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Fixing the Font Boldness problem</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The font that I had chosen – NotoSans Egyptian – to display the hieroglyphs was not working well visually within the confines of a 6 by 6 puzzle grid. Multiple playtesters commented that the hieroglyph font was difficult to see and the lines needed to be more simple and bold. I took a double-pronged approach to solving this problem – first, I found another free font that was specifically designed with heavier, simpler strokes for computer display legibility, the NewGardiner hieroglyph font. This improved the ‘look’ of the puzzle grid glyphs but I wanted to improve upon that still more.  The second prong of my approach – my saga into convincing the Unity-native text plugin Text Mesh Pro to make the hieroglyphs in the grid puzzle cells bold with an added dark brown bevel. After many dead ends I finally found out what was wrong – the ‘padding’ for the hieroglyph font had not been turned on when the font asset was first constructed with the Unity font asset maker, which was why the boldness adjustments inside of Text Mesh Pro were not working. I spent a lot of time isolating the problem by testing things out, including even at one point asking Claude AI to edit the shader code of the actual font.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Implemented a multiple ending system based on God and Human affinities. Built a custom Editor tool (AffinityBalanceWindow) plus a standalone Python script to scan every .yarn file and report how many points each god/human affinity can reach — an early investment in being able to catch a lopsided narrative before I'd written too much content to fix easily.</li>
+</ul>
+</article>
+<article id="bast-w7" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 7</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Big Content Push</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Spent the week plugging in all of the narrative I had written into the game prototype. Before I did so I made sure that I had all the systems in place to assign ending affinity points to each puzzle answer, and that every one of the hieroglyph puzzles could be written directly as arguments to a custom Yarn command – &lt;&lt;set puzzle&gt;&gt;  – this meant that authoring was a lot quicker without me having to go in and out of the dialogue script and hard coding each and every puzzle manually in another script.  That the authoring into a .yarn file went smoothly and relatively without hitches was proof that what I had built and tested up to this point was sound, and that I had thought clearly and well about how to use YarnSpinner as my authoring tool, which I am quite proud of.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Completed a 12-slide pitch deck (USP, core loop, day/night structure, affinity/16-endings, audience, market positioning, roadmap, budget, team, ask). Practiced pitching the game as a commercially viable investment.</li>
+<li style="margin-bottom:6px;">Created Yarn syntax reference document, initially covering file structure, dialogue lines, variables, branching, and the custom commands built so far — a living document I kept coming back to expand as new systems were added.</li>
+</ul>
+</article>
+<article id="bast-w8" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 8</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">The Beginning of an Iterative Design Process</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Playtesting feedback indicated that the game is lacking in ‘game juice’ and ‘drama’ so I began the process of polishing and iterating on the prototype. Game music, made in Suno AI, was added – my process involved asking Claude AI to come up with a prompt that described a real reference song, editing that prompt a little to suit the themes of the game, and then feeding it into Suno AI.  One thing I am proud of implementing is the floating/sliding character name tab that has an acceleration/deceleration as it moves to sit under each character’s portrait, ending in a ‘bounce’ at the end of each movement. This was the point at which I started to feel I could implement the ‘cinematics’ side of game design. It’s easy to get bogged down in bug fixing but adding simple touches makes the game come alive.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Used Claude Code with Visual Studio Code directly this week for the first time. It is amazing, I can’t believe I haven’t been using it like this across the entire project.</li>
+<li style="margin-bottom:6px;">Built the Meritatum → Cat_Meritamun crossfade transformation scene</li>
+<li style="margin-bottom:6px;">Added sound effects and emotion react animations behind character portraits. (Puzzle Win reacts, Angry Reacts)</li>
+<li style="margin-bottom:6px;">I learned how to use basic tools in Paint.net, a free art software, to make small edits to 2D digital art. (Cleaned up a fussy looking corner decoration on the dialogue box sprite)</li>
+</ul>
+</article>
+<article id="bast-w9" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 9</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Iteration Continued</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Something I was pleased to see this week – my game design mentor finally chuckled at something I had built in-game. I used a sprite swap to ‘animate’ the cat character and added a happy meow and a ‘stand up on hind legs’ portrait swap as a puzzle-win reaction after you correctly input a puzzle answer. These are the things that my game design soul lives for.  I focused on continuing to add more ‘drama’ to the game, dialing up the ‘cuteness’ and ‘juice’ so that it feels more like a game rather than just a working system that is neatly strung together.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Implemented click-to-skip on the dialogue box, so clicking mid-typewriter completes the current line instantly. This took some quite involved investigation — my first two attempts were based on assumptions about how Yarn Spinner's Line Advancer worked that turned out to be wrong – the working fix used Line Advancer's own public RequestLineHurryUp() method rather than anything I'd built myself.</li>
+<li style="margin-bottom:6px;">Added a custom cursor (a cat-paw image) that appears while hovering the puzzle grid.</li>
+</ul>
+</article>
+<article id="bast-w10" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 10</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Polish and Game Feel</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I added a “puzzled” expression to the cat player character’s repertoire of emotive portraits, as well as a portrait “pop/ease” scale animation. Adding to that, I created small visual effects to liven up the background images, achieved with very simple animations such as sunlight rays, candle glows, rolling mist and tiny fish leaping out of a pond. All of these little touches have added to a big glow-up of the game – the lesson here is that even tiny additions, cumulatively, can make a huge difference in the feel and polish of a game.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I had to dive back into visual design/font issues with the scaling up of the puzzle difficulty. When the puzzle becomes a denser grid with more hieroglyph cells, I’ve set it up so that the small cells have a blank margin around each glyph to increase legibility. Negative space is incredibly important to the design of a font and its visual usability.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Another major design task was to create a formula for the number of decoy/noise hieroglyphs in each puzzle – each puzzle now has a 50% of decoy glyphs as calculated by the number of different base glyphs within the answers of each &lt;setpuzzle&gt; command. The outcome is that there is some amount of variability in difficulty across the puzzles. My design thinking here is, on balance, for a game with a very minimal number of interactive mechanics, variety is a bonus rather than a detriment.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Implemented audio ‘ducking’ as a fix for the fact that the sound effects were fighting with the game music.</li>
+<li style="margin-bottom:6px;">Created a partial lexicon for the purposes and scale of the prototype.  This involved expanding the hieroglyph list – now each hieroglyph looks roughly like what it ‘means’ in English. This is taking inspiration from Chinese characters, and not actually how hieroglyphs work in real life.</li>
+</ul>
+</article>
+<article id="bast-w11" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 11</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Hieroglyph Legibility Problems Will Haunt Me Forever</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">The faint-hieroglyph problem from Week 6 came back to haunt me this week. I had a long bug fixing session where all I did was dig around to find why using the &lt;b&gt; &lt;/b&gt; commands inside my .yarn scripts were failing to produce the font bolding that I wanted. Again, I partnered with Claude Code AI to slowly eliminate possible causes and found in the end that a bolding setting inside Text Mesh Pro was the culprit. By increasing both the boldness and the relative point size of the hieroglyphs in the dialogue box, the visual usability of the hieroglyph answer displayed in the dialogue box is now where I want it to be.  Feedback from the game design mentor was still that the game continues to fail to convince him it will be a fun game to play. I looked at other visual novels and how they grab attention in the first minute or two of gameplay – they have to generate a hook immediately because narrative is a very slow burn payoff. As a story-hook-emphasising design flourish I added a short ‘establishing scene’ in between the player pressing the play button and the game starting. It shows the player character dying and falling into the large, divine cat-paw of Sekhmet, in a transition that I hope looks like descending into the Egyptian Duat (Land of the Dead.)  Another thing I added was a very small minigame inside the daytime temple scenes – vermin animals now occasionally pop up and the players click then to ‘hunt’ them (I spent time dialing in the parameters – movement speed, trajectory and spawn frequency). There is a disappearing UI element that counts the kills. It ties in with the Bes deity plot of the story but more importantly it gives the player immediate-term satisfaction, which targets the ‘fails to convince player the game is fun’ criticism.  In terms of player agency and feedback on player action I have rejigged the game so that certain actions of the player have consequences later on in the game.  – the name you choose for the Cat character now persists during the later part of the game,  –and your ‘choice’ to tell the NPC Harwa to go to the races results in him showing injuries in a later scene.  –Your vermin control abilities are also commented on by the god Bes who judges you on how many vermin animals you succeed at ‘catching’ (clicking on).   –Finally, the choices in the game you make give you different interactions with the Gods when you ‘report’ to them the goings-on of the royal family of Egypt at the end of game.</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">I have been soliciting feedback from playtesters, which I think is critical to the game design process.  I was most concerned with whether playtesters are able to pick up on what the story is and if they are invested in it, as this is the bread and butter of visual novel games. Playtesters enjoyed the premise and the story, which was great. The real difficulty has been adding interest to the wordsearch part of the game, which isn’t meant to be incredibly taxing, but also isn’t meant to be dull either. In response to the playtesting feedback I added a timed scramble feature to the wordsearch puzzle – now you have to solve the puzzle within a set amount of time, otherwise the grid scrambles and you have to start your search all over again. To make it feel ‘fair’ there’s a ‘tile ripple’ animation that triggers when your puzzle solving time is half over, and again near the end giving a 3 second countdown in the last 3 seconds. If the timer is running down whilst you have cells selected you get another 3 second countdown / grace period to finish your selection. The sound effects accompanying the tile-ripple animation aren’t exactly spectacular but I regard them as placeholders for something a bit more polished if I ever get an audio specialist to do the sound effects for me.</p>
+<div style="font-family:var(--font-heading);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);margin:20px 0 10px;">Also this week</div>
+<ul style="margin:0 0 16px;padding-left:20px;font-size:15px;line-height:1.6;">
+<li style="margin-bottom:6px;">Continued to tweak the visuals of the game so that it can look really polished – softer change gradients for the moving rays of sunlight in the daytime scene, increased alphas for the inactive character portraits.</li>
+<li style="margin-bottom:6px;">Thought bubble display for Cat_Meritamun’s internal monologue bits.</li>
+<li style="margin-bottom:6px;">Bashed together 2 images made by ChatGPT to make a composite image for the Establishing Scene.  Used art software GIMP for – the airbrush tool is magic.</li>
+<li style="margin-bottom:6px;">Asked a game audio artist/composer to help with making the music better, and wrote a Music Design Document for him to follow. I’m not holding out that he’ll have time to volunteer for this unpaid work, but then if you don’t ask, you don’t get.</li>
+<li style="margin-bottom:6px;">Added location indicating intertitles at the beginning of the game so the player knows that there has been a location change in the diegesis of the game.</li>
+</ul>
+</article>
+<article id="bast-w12" style="padding:36px 0;border-top:1px solid var(--color-divider);">
+<div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+<span style="font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent-700);">WEEK 12</span>
+</div>
+<p style="margin:0 0 16px;font-family:var(--font-heading);font-weight:600;font-size:19px;">Documentation and Reflection</p>
+<p style="margin:0 0 16px;font-size:16px;line-height:1.65;">Some things stand out to me as I look back across 12 weeks of production.  My first reflection is that when working with multiple pieces of complex coded technology lateral thinking is your best friend. The weeks I struggled with PixelCrusher’s dialogue system could have been saved if only I had thought about the problem by stepping back – why was there any reason to be married to this piece of software? None, other than the fact that I’d already purchased it. As soon as I got over this hurdle of logic the solution was simple: just use another asset that can give you the effect you want – YarnSpinner. If only I had stepped back from the problem to look at it from a wider perspective I would have arrived at the solution much faster, instead of struggling to hack a tool that is not suited for the task.  My second reflection is that I got into trouble whenever I had no underlying understanding of how pieces of technology ‘worked.’ My struggles with the font boldness saga, for example, was hampered by the fact that when I began this project I didn’t fully understand what a font IS.  Without understanding what a font IS, in technical art terms I had no reference point as to how to fix a problem or how the different parameters that are given to that particular thing actually help. But once I understood what a font actually was, (it’s a series of vertices that are linked up to a shader, which is a piece of code) I was able to give each glyph the ‘padding’ that was needed to effect the design vision I needed.  This is a good lesson and habit to remember going forward – what you don’t know OR are doing for the first time will be a learning process. It will take some time.  Roll with it, don’t get frustrated. (It was a similar situation with the PixelCrushers/ hieroglyph unicode parsing blocker – I didn’t actually have any understanding of how these things worked, which hampered my efforts to solve the problem.) Finally, something that went well – during the later stages of the production I was advised to try out a new technology/method (using Claude Code in Visual Studio) instead of sticking to what I already knew (Claude Chat and copy pasting code in and out of that). I have to admit that it felt like black magic to try a new and marvellous development tool – but given the level of polish and professional finish that I was able to achieve by quickly adding visual effect sprites using Claude Code, that pivot in using a different method has been an absolute godsend. This is something I will be taking into future game production efforts – if you have technology that can do something faster and easier, take advantage of it. Obviously vibe coding has its limitations, but for the purposes of rapid prototyping it is pretty close to perfect: it’s not client-facing, it’s a video game, so it’s a low stakes use case that makes sense and enhances communicating a design vision, and most importantly it enables game designers of ‘fail, but faster.’ Using Claude Code means less time and money wasted on making game mechanics that aren’t good because you can build prototypes to try them out incredibly quickly.  Overall Bast was a satisfying project in which I learned much and achieved some. Onward to bigger things!</p>
+</article>
+</section>
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<span>© Loretta Lok</span>
+<div style="display:flex;gap:20px;">
+<a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener">itch.io</a>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>

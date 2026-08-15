@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
+:root{
+  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40;
+  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif;
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-600);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--color-accent);color:var(--color-bg);}
+.btn-primary:hover{background:var(--color-accent-600);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.btn-block{display:flex;width:100%;margin-bottom:10px;}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:24px;background:transparent;}
+.card-kicker{font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:10px;display:block;}
+.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0;}
+.sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
+.sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
+.sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
+.sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
+.sidebar .btn{margin-top:24px;}
+@media (max-width: 860px){
+  .sidebar{position:static;width:auto;height:auto;border-right:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
+  .sidebar-brand{margin-bottom:0;margin-right:auto;}
+  .sidebar-links{flex-direction:row;gap:18px;margin-bottom:0;}
+  .main-with-sidebar{margin-left:0 !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="sidebar">
+<img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
+<a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
+<div class="sidebar-links">
+<a href="./Home.dc.html">Home</a>
+<a href="./Production.dc.html">Production</a>
+<a href="./Design.dc.html" aria-current="page">Design</a>
+<a href="./CV.dc.html">CV</a>
+<a href="./Blog.dc.html">Devlog</a>
+</div>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">itch.io ↗</a>
+</div>
+
+<div class="main-with-sidebar" style="margin-left:220px;max-width:1000px;padding:0 clamp(20px,5vw,64px);">
+
+<section style="padding:64px 0 40px;max-width:620px;">
+<span style="display:block;font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;">Solo work</span>
+<h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(34px,5vw,46px);line-height:1.1;margin:0 0 20px;">Design Portfolio</h1>
+<p style="font-size:16px;line-height:1.6;margin:0;color:color-mix(in srgb, var(--color-text) 80%, transparent);">Self-initiated projects — solo, or in small teams I formed and led myself — outside of larger assigned productions. Those live on the <a href="./Production.dc.html">Production Portfolio</a>.</p>
+</section>
+
+<!-- ============ BAST ============ -->
+<section id="bast" style="padding:24px 0 80px;border-top:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Personal Project · 12 Weeks · May–Aug 2026 · Solo</span>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Bast</h2>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A hieroglyph-wordsearch visual novel about a reincarnated temple cat</p>
+
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
+<image-slot id="port-bast-hero" shape="rect" placeholder="Bast key art / gameplay screenshot" style="width:100%;height:100%;"></image-slot>
+</div>
+
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:48px;">
+<div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:18px;margin:0 0 12px;">Overview</h3>
+<p style="font-size:15px;line-height:1.7;margin:0 0 24px;">Bast is a 10-minute vertical slice built solo over 12 weeks: the player is reincarnated as a temple cat trying to communicate with their grieving family after dying as an Ancient Egyptian priestess-princess, solving hieroglyph wordsearch puzzles to advance branching dialogue toward one of sixteen endings.</p>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:18px;margin:0 0 12px;">Design &amp; production</h3>
+<ul style="font-size:15px;line-height:1.7;margin:0 0 24px;padding-left:20px;">
+<li style="margin-bottom:10px;">Chose the visual novel format deliberately: it played to writing and Unity strengths while keeping the programming scope achievable solo in 12 weeks.</li>
+<li style="margin-bottom:10px;">Planned the production with a Gantt chart and Trello board before writing a line of code, then wrote the full plot and dialogue in a Game Design Document.</li>
+<li style="margin-bottom:10px;">Hit a hard technical blocker when the PixelCrusher dialogue system couldn't parse hieroglyph characters; rather than keep fighting the tool, switched to YarnSpinner mid-production after weighing the tradeoffs with a mentor.</li>
+<li style="margin-bottom:10px;">Used AI tools (ChatGPT for art, Claude for code, Suno for music) deliberately as placeholder-asset generators to keep the 12-week prototype on schedule, treating their output as raw material to verify and rework rather than final content.</li>
+<li style="margin-bottom:10px;">Ran continuous playtesting and iterated directly on the feedback: added a timed puzzle-scramble mechanic and a story-hook opening scene after testers found the wordsearch too static and the narrative too slow to grab attention.</li>
+<li style="margin-bottom:0;">Wrote a full production postmortem covering technical decision-making and lessons for future solo prototypes.</li>
+</ul>
+</div>
+<div>
+<div class="card">
+<div class="card-kicker">Role</div>
+<p style="font-size:15px;margin:0 0 20px;">Solo Developer (Design, Writing &amp; Programming)</p>
+<div class="card-kicker">Tools</div>
+<p class="card-body" style="margin:0 0 20px;">Unity, YarnSpinner, Text Mesh Pro<br>ChatGPT, Claude &amp; Suno (placeholder assets)</p>
+<a href="https://loretta-lok.itch.io/bast" target="_blank" rel="noopener" class="btn btn-primary btn-block">Play on itch.io ↗</a>
+<a href="./BlogBast.dc.html" class="btn btn-secondary btn-block">Read the devlog</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ============ SCRAN DASH ============ -->
+<section id="scran-dash" style="padding:24px 0 80px;border-top:1px solid var(--color-divider);">
+<span style="display:block;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--color-accent);margin-bottom:12px;">Self-Initiated · Team of 3 (from 4) · Academic Module</span>
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(28px,4vw,36px);margin:0 0 10px;">Scran Dash</h2>
+<p style="font-size:16px;color:color-mix(in srgb, var(--color-text) 75%, transparent);margin:0 0 28px;">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game</p>
+
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:16/7;margin-bottom:32px;">
+<image-slot id="port-scran-hero" shape="rect" placeholder="Scran Dash key art / gameplay screenshot" style="width:100%;height:100%;"></image-slot>
+</div>
+
+<div style="display:grid;grid-template-columns:2fr 1fr;gap:48px;">
+<div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:18px;margin:0 0 12px;">Overview</h3>
+<p style="font-size:15px;line-height:1.7;margin:0 0 24px;">Scran Dash is a cozy game about a hedgehog dad rolling up into a ball to gather food and items for his hoglets, denned in the mausoleum of a buried magic-user whose spellbook he's inherited. I pitched the concept — a whimsical cross between Katamari Damacy and Untitled Goose Game, set on the grounds of a gothic mansion — and it's the idea that won me the Design Lead role on the team.</p>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:18px;margin:0 0 12px;">Design &amp; leadership</h3>
+<ul style="font-size:15px;line-height:1.7;margin:0 0 24px;padding-left:20px;">
+<li style="margin-bottom:10px;">Originated the core concept and pitched it to the team; the rolling pickup mechanic it was built around is what won the team over.</li>
+<li style="margin-bottom:10px;">As Design Lead, wrote the majority of the Game Design Document, especially the setting, narrative and backstory.</li>
+<li style="margin-bottom:10px;">Allocated work by individual strength: Kieran on the resource-management game loop, Virginia on UI and player movement/pickup, Megan on game art.</li>
+<li style="margin-bottom:10px;">Replanned scope after two team members fell ill and a third, Kieran, dropped out entirely — downscoping the resource-management loop to a prototype that nods to the fuller system planned for future iterations, rather than losing the milestone.</li>
+<li style="margin-bottom:0;">Ran weekly scrums and used Codecks to keep the team aligned between meetings, with GitHub for version control across a AAA-style production brief.</li>
+</ul>
+</div>
+<div>
+<div class="card">
+<div class="card-kicker">Role</div>
+<p style="font-size:15px;margin:0 0 20px;">Design Lead &amp; Ideator</p>
+<div class="card-kicker">Team</div>
+<p class="card-body" style="margin:0 0 20px;">Virginia — UI, Movement &amp; Pickup<br>Megan — Game Art<br>Kieran — Resource Management (departed mid-project)</p>
+<div class="card-kicker" style="margin-top:20px;">Tools</div>
+<p class="card-body" style="margin:0 0 20px;">Unity, Codecks, GitHub</p>
+<a href="https://loretta-lok.itch.io/scran-dash" target="_blank" rel="noopener" class="btn btn-primary btn-block">Play on itch.io ↗</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<span>© Loretta Lok</span>
+<div style="display:flex;gap:20px;">
+<a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener">itch.io</a>
+</div>
+</footer>
+
+</div>
+
+<div style="font-size: 16px; line-height: 1; font-family: Lora, Georgia, serif; position: absolute; left: 163px; top: 6px">Your text here</div></x-dc>
+</body>
+</html>
