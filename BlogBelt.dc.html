@@ -28,6 +28,10 @@ a:hover{color:var(--color-accent-600);}
 .sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
 .sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
 .sidebar .btn{margin-top:24px;}
+.sidebar-group{position:relative;}
+.sidebar-sub{display:none;flex-direction:column;padding-left:14px;}
+.sidebar-group:hover .sidebar-sub{display:flex;}
+
 @media (max-width: 860px){
   .sidebar{position:static;width:auto;height:auto;border-left:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
   .sidebar-brand{margin-bottom:0;margin-right:auto;}
@@ -42,11 +46,49 @@ a:hover{color:var(--color-accent-600);}
 <img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
 <a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
 <div class="sidebar-links">
+<div class="sidebar-group">
 <a href="./Home.dc.html">Home</a>
+<div class="sidebar-sub">
+<a href="./Home.dc.html#about" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">About</a>
+<a href="./Home.dc.html#as-a-producer" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">As a producer</a>
+<a href="./Home.dc.html#featured-projects" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Featured projects</a>
+<a href="./Home.dc.html#as-a-game-designer" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">As a game designer</a>
+<a href="./Home.dc.html#featured-design-projects" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Featured design projects</a>
+</div>
+</div>
+<div class="sidebar-group">
 <a href="./Production.dc.html">Production</a>
+<div class="sidebar-sub">
+<a href="./Production.dc.html#sinners-belt" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Sinner's Belt</a>
+<a href="./Production.dc.html#little-pig" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Little Pig</a>
+<a href="./Production.dc.html#doggo-detective" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Doggo Detective</a>
+</div>
+</div>
+<div class="sidebar-group">
 <a href="./Design.dc.html">Design</a>
+<div class="sidebar-sub">
+<a href="./Design.dc.html#bast" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Bast</a>
+<a href="./Design.dc.html#scran-dash" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Scran Dash</a>
+</div>
+</div>
+<div class="sidebar-group">
 <a href="./CV.dc.html">CV</a>
-<a href="./Blog.dc.html" aria-current="page">Devlog</a>
+<div class="sidebar-sub">
+<a href="./CV.dc.html#skills" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Skills</a>
+<a href="./CV.dc.html#achievements" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Achievements</a>
+<a href="./CV.dc.html#education" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Education</a>
+<a href="./CV.dc.html#experience" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Experience</a>
+</div>
+</div>
+<div class="sidebar-group">
+<a href="./Blog.dc.html">Devlog</a>
+<div class="sidebar-sub">
+<a href="./BlogBelt.dc.html" aria-current="page" style="font-size:13px;padding:5px 0;color:var(--color-accent);font-weight:600;text-decoration:none;">Sinner's Belt</a>
+<a href="./BlogPig.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Little Pig</a>
+<a href="./BlogDoggo.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Doggo Detective</a>
+<a href="./BlogBast.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Bast</a>
+</div>
+</div>
 </div>
 <a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">itch.io ↗</a>
 </div>

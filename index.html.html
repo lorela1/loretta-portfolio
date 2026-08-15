@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Work+Sans:wght@400;500;600&display=swap');
+:root{
+  --color-bg:#f6f1e7; --color-text:#2b241c; --color-accent:#3f5e4f; --color-accent-600:#334d40;
+  --color-accent-2:#c9a86a; --color-divider: color-mix(in srgb, #2b241c 15%, transparent);
+  --font-display:"Lora",Georgia,serif; --font-body:"Work Sans",system-ui,sans-serif;
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty;}
+a{color:var(--color-accent);}
+a:hover{color:var(--color-accent-600);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-weight:600;font-size:15px;padding:13px 26px;border-radius:3px;text-decoration:none;cursor:pointer;border:1px solid transparent;}
+.btn-primary{background:var(--color-accent);color:var(--color-bg);}
+.btn-primary:hover{background:var(--color-accent-600);}
+.btn-secondary{border-color:var(--color-divider);color:var(--color-text);background:transparent;}
+.btn-secondary:hover{background:color-mix(in srgb, var(--color-text) 6%, transparent);}
+.card{border:1px solid var(--color-divider);border-radius:4px;padding:26px;background:transparent;}
+.card-title{font-family:var(--font-display);font-size:19px;margin-bottom:8px;}
+.card-body{font-size:14px;line-height:1.65;color:color-mix(in srgb, var(--color-text) 80%, transparent);margin:0;}
+.tag{display:inline-flex;font-size:11px;letter-spacing:0.04em;padding:4px 11px;border-radius:20px;border:1px solid var(--color-divider);color:color-mix(in srgb, var(--color-text) 70%, transparent);}
+.sidebar{position:fixed;top:0;left:0;height:100vh;width:220px;border-right:1px solid var(--color-divider);display:flex;flex-direction:column;padding:44px 30px;overflow-y:auto;box-sizing:border-box;}
+.sidebar-brand{font-family:var(--font-display);font-style:italic;font-size:23px;color:var(--color-text);text-decoration:none;margin-bottom:56px;line-height:1.25;}
+.sidebar-links{display:flex;flex-direction:column;gap:2px;margin-bottom:auto;}
+.sidebar-links a{font-size:15px;color:var(--color-text);text-decoration:none;padding:9px 0;}
+.sidebar-links a[aria-current='page']{color:var(--color-accent);font-weight:600;}
+.sidebar .btn{margin-top:24px;}
+.sidebar-group{position:relative;}
+.sidebar-sub{display:none;flex-direction:column;padding-left:14px;}
+.sidebar-group:hover .sidebar-sub{display:flex;}
+
+@media (max-width: 860px){
+  .sidebar{position:static;width:auto;height:auto;border-left:0;border-bottom:1px solid var(--color-divider);flex-direction:row;align-items:center;padding:20px clamp(20px,5vw,48px);flex-wrap:wrap;gap:18px;}
+  .sidebar-brand{margin-bottom:0;margin-right:auto;}
+  .sidebar-links{flex-direction:row;gap:18px;margin-bottom:0;}
+  .main-with-sidebar{margin-left:0 !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="sidebar">
+<img src="./assets/loretta-photo.jpg" alt="Loretta Lok" style="width:64px;height:64px;border-radius:50%;object-fit:cover;margin-bottom:18px;border:1px solid var(--color-divider);">
+<a href="./Home.dc.html" class="sidebar-brand">Loretta<br>Lok</a>
+<div class="sidebar-links">
+<div class="sidebar-group">
+<a href="./Home.dc.html" aria-current="page">Home</a>
+<div class="sidebar-sub">
+<a href="./Home.dc.html#about" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">About</a>
+<a href="./Home.dc.html#as-a-producer" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">As a producer</a>
+<a href="./Home.dc.html#featured-projects" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Featured projects</a>
+<a href="./Home.dc.html#as-a-game-designer" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">As a game designer</a>
+<a href="./Home.dc.html#featured-design-projects" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Featured design projects</a>
+</div>
+</div>
+<div class="sidebar-group">
+<a href="./Production.dc.html">Production</a>
+<div class="sidebar-sub">
+<a href="./Production.dc.html#sinners-belt" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Sinner's Belt</a>
+<a href="./Production.dc.html#little-pig" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Little Pig</a>
+<a href="./Production.dc.html#doggo-detective" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Doggo Detective</a>
+</div>
+</div>
+<div class="sidebar-group">
+<a href="./Design.dc.html">Design</a>
+<div class="sidebar-sub">
+<a href="./Design.dc.html#bast" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Bast</a>
+<a href="./Design.dc.html#scran-dash" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Scran Dash</a>
+</div>
+</div>
+<div class="sidebar-group">
+<a href="./CV.dc.html">CV</a>
+<div class="sidebar-sub">
+<a href="./CV.dc.html#skills" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Skills</a>
+<a href="./CV.dc.html#achievements" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Achievements</a>
+<a href="./CV.dc.html#education" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Education</a>
+<a href="./CV.dc.html#experience" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Experience</a>
+</div>
+</div>
+<div class="sidebar-group">
+<a href="./Blog.dc.html">Devlog</a>
+<div class="sidebar-sub">
+<a href="./BlogBelt.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Sinner's Belt</a>
+<a href="./BlogPig.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Little Pig</a>
+<a href="./BlogDoggo.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Doggo Detective</a>
+<a href="./BlogBast.dc.html" style="font-size:13px;padding:5px 0;color:var(--color-text);text-decoration:none;">Bast</a>
+</div>
+</div>
+</div>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top:auto;">itch.io ↗</a>
+</div>
+
+<div class="main-with-sidebar" style="margin-left:220px;max-width:1000px;padding:0 clamp(20px,5vw,64px);">
+
+<div style="position:relative;margin:0 -1px;overflow:hidden;border-bottom:1px solid var(--color-divider);">
+<img src="./assets/watercolor-1.jpg" alt="Watercolor painting by Loretta Lok" style="display:block;width:100%;height:clamp(160px,26vw,260px);object-fit:cover;">
+<span style="position:absolute;bottom:10px;right:12px;font-size:11px;color:#f6f1e7;background:rgba(43,36,28,0.45);padding:3px 8px;border-radius:3px;letter-spacing:0.02em;">watercolor art by Loretta Lok</span>
+</div>
+
+<section style="padding:56px 0 64px;max-width:640px;">
+<span style="display:block;font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-accent);margin-bottom:16px;">Game Designer &amp; Producer</span>
+<h1 style="font-family:var(--font-display);font-weight:600;font-size:clamp(44px,6vw,64px);line-height:1.1;margin:0 0 24px;">Loretta Lok</h1>
+<p style="font-size:18px;line-height:1.6;margin:0 0 32px;color:color-mix(in srgb, var(--color-text) 85%, transparent);">I design and produce games, leading the multidisciplinary teams that build them — from two-week game jams to a twenty-person academic AAA production.</p>
+<div style="display:flex;gap:16px;flex-wrap:wrap;">
+<a href="./Production.dc.html" class="btn btn-primary">Production portfolio</a>
+<a href="./Design.dc.html" class="btn btn-secondary">Design portfolio</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener" class="btn btn-secondary">Play on itch.io ↗</a>
+</div>
+</section>
+
+<section id="about" style="padding:32px 0 64px;border-top:1px solid var(--color-divider);max-width:640px;">
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:0 0 20px;">About</h2>
+<p style="font-size:16px;line-height:1.7;margin:0 0 20px;">I'm a game designer with a BA in Games Design&nbsp; (2023–2026). I've written the design documents, run the sprints and led the teams on three productions: a cozy detective game jam (<a href="./Production.dc.html#doggo-detective" style="font-weight:600;">Doggo Detective</a>), a horror-stealth game jam (<a href="./Production.dc.html#little-pig" style="font-weight:600;">Little Pig</a>), and a twenty-person academic AAA capstone (<a href="./Production.dc.html#sinners-belt" style="font-weight:600;">Sinner's Belt</a>). I was appointed Lead Designer in all of these productions.<br><br>Before that, I spent close to a decade in legal advocacy and research — at Chambers and Partners, the Free Representation Unit, the Access to Justice Foundation, the Communities Empowerment Network and Citizens Advice — representing clients, drafting arguments, and managing casework under fixed deadlines.</p>
+</section>
+
+<section id="as-a-producer" style="padding:8px 0 72px;border-top:1px solid var(--color-divider);">
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">As a producer</h2>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;max-width:560px;">Evidence from three productions, not a list of buzzwords.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+<div class="card">
+<div class="card-title">Team structure</div>
+<p class="card-body">Appointed Lead Designer on <a href="./Production.dc.html#sinners-belt" style="font-weight:600;">Sinner's Belt</a>, a 20-person production split across two campuses.&nbsp; Directed the multi-disciplinary team, making resourcing decisions and scope evaluations</p>
+</div>
+<div class="card">
+<div class="card-title">Schedules &amp; milestones</div><p class="card-body">Ran weekly sprint reviews and kept sprint logs across all three productions, tracking scope against a fixed deadlines using industry standard software and methods like Agile and Trello.&nbsp;</p>
+
+</div>
+<div class="card">
+<div class="card-title">Scope cuts</div>
+<p class="card-body">Downscoped <a href="./Production.dc.html#little-pig" style="font-weight:600;">Little Pig</a> from three rooms to two, mid-production, to ship a complete demo instead of an unfinished larger one.</p>
+</div>
+<div class="card">
+<div class="card-title">Playtest → iteration</div>
+<p class="card-body">Took <a href="./Production.dc.html#doggo-detective" style="font-weight:600;">Doggo Detective</a>'s prototype to external testers, then rewrote the tutorial and added a non-colour visual cue after players missed the core puzzle.</p>
+</div>
+<div class="card">
+<div class="card-title">Postmortems</div>
+<p class="card-body">Wrote structured postmortems after each production — <a href="./Production.dc.html#doggo-detective" style="font-weight:600;">Doggo Detective</a>, <a href="./Production.dc.html#little-pig" style="font-weight:600;">Little Pig</a> and <a href="./Production.dc.html#sinners-belt" style="font-weight:600;">Sinner's Belt</a> — and changed process on the next project as a result.</p>
+</div>
+<div class="card">
+<div class="card-title">Conflict resolution</div>
+<p class="card-body">Arbitrated a texturing dispute between two artists on <a href="./Production.dc.html#sinners-belt" style="font-weight:600;">Sinner's Belt</a> as Lead Designer, and repaired a workload misunderstanding with a programmer on <a href="./Production.dc.html#little-pig" style="font-weight:600;">Little Pig</a> through direct conversation.</p>
+</div>
+</div>
+</section>
+
+<section id="featured-projects" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">Featured projects</h2>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;">From the <a href="./Production.dc.html">Production Portfolio</a> — see the <a href="./Design.dc.html">Design Portfolio</a> for solo work.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
+
+<a href="./Production.dc.html#sinners-belt" style="text-decoration:none;color:inherit;display:block;">
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
+<img src="./screenshot-2026-02-12-062537-msub00fe-cwp0.png" alt="Sinner's Belt key art" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div style="display:flex;gap:8px;margin-bottom:10px;">
+<span class="tag">Academic Capstone</span>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Sinner's Belt</h3>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A dystopian sci-fi FPS built across two campuses. Lead Designer, ~20-person team.</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
+</a><a href="./Production.dc.html#little-pig" style="text-decoration:none;color:inherit;display:block;">
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
+<img src="./screenshot-2025-07-21-103955-msuazjfn-wed9.png" alt="Little Pig key art" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div style="display:flex;gap:8px;margin-bottom:10px;">
+<span class="tag">Game Jam</span>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Little Pig</h3>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A horror-stealth puzzle platformer. Co-Lead Designer &amp; QA Lead, 6-person team.</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
+</a>
+
+<a href="./Production.dc.html#doggo-detective" style="text-decoration:none;color:inherit;display:block;">
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
+<img src="./screenshot-2024-08-04-150751-msuaz2qy-499j.png" alt="Doggo Detective key art" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div style="display:flex;gap:8px;margin-bottom:10px;">
+<span class="tag">Game Jam</span>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Doggo Detective</h3>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A cozy detective game about a Hong Kong police dog. Game Designer &amp; Team Leader, 8-person team.</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
+</a>
+
+
+
+</div>
+</section>
+
+<section id="as-a-game-designer" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">As a game designer</h2>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;max-width:560px;">Design decisions from two self-initiated projects, where the design was entirely mine to originate and defend.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+<div class="card">
+<div class="card-title">Originating a concept</div>
+<p class="card-body">Pitched <a href="./Design.dc.html#scran-dash" style="font-weight:600;">Scran Dash</a>'s core idea — a hedgehog dad rolling into a ball, crossing Katamari Damacy with Untitled Goose Game — and won the Design Lead role on the strength of it.</p>
+</div>
+<div class="card">
+<div class="card-title">Systemic puzzle design</div>
+<p class="card-body">Built <a href="./Design.dc.html#bast" style="font-weight:600;">Bast</a>'s core loop around hieroglyph wordsearch puzzles gating branching dialogue toward one of sixteen endings.</p>
+</div>
+<div class="card">
+<div class="card-title">Worldbuilding &amp; narrative</div>
+<p class="card-body">Wrote <a href="./Design.dc.html#bast" style="font-weight:600;">Bast</a>'s full story and dialogue — a reincarnated temple cat trying to reach a grieving family — and <a href="./Design.dc.html#scran-dash" style="font-weight:600;">Scran Dash</a>'s setting and backstory as Design Lead.</p>
+</div>
+<div class="card">
+<div class="card-title">Development Pipeline Problem Solving</div>
+<p class="card-body">Switched <a href="./Design.dc.html#bast" style="font-weight: 600;">Bast</a>&nbsp;to another branching dialogue tool -- YarnSpinner --&nbsp; mid-production after the original dialogue system couldn't parse hieroglyph characters.</p>
+</div>
+<div class="card">
+<div class="card-title">Playtest-driven iteration</div>
+<p class="card-body">Added a timed puzzle-scramble mechanic and a story-hook opening to <a href="./Design.dc.html#bast" style="font-weight:600;">Bast</a> after testers found the wordsearch too static and the narrative too slow to grab attention.</p>
+</div>
+<div class="card">
+<div class="card-title">Scoping under constraint</div>
+<p class="card-body">Replanned <a href="./Design.dc.html#scran-dash" style="font-weight: 600;">Scran Dash</a>'s resource-management loop into a smaller working prototype after one team members fell ill and another&nbsp;dropped out mid-project.</p>
+</div>
+</div>
+</section>
+
+<section id="featured-design-projects" style="padding:8px 0 80px;border-top:1px solid var(--color-divider);">
+<h2 style="font-family:var(--font-display);font-weight:600;font-size:27px;margin:32px 0 8px;">Featured design projects</h2>
+<p style="font-size:15px;color:color-mix(in srgb, var(--color-text) 65%, transparent);margin:0 0 32px;">From the <a href="./Design.dc.html">Design Portfolio</a> — self-initiated projects, solo or in teams I formed myself.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
+
+<a href="./Design.dc.html#bast" style="text-decoration:none;color:inherit;display:block;">
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
+<img src="./templedaybackground-msueyapm-q3qc.png" alt="Bast key art" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div style="display:flex;gap:8px;margin-bottom:10px;">
+<span class="tag">Personal Project</span>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Bast</h3>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A hieroglyph-wordsearch visual novel about a reincarnated temple cat. Solo Developer.</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
+</a>
+
+<a href="./Design.dc.html#scran-dash" style="text-decoration:none;color:inherit;display:block;">
+<div style="position:relative;border:1px solid var(--color-divider);border-radius:4px;overflow:hidden;aspect-ratio:4/3;margin-bottom:16px;">
+<img src="./screenshot-2026-02-19-142710-msuezmlj-3ju3.png" alt="Scran Dash key art" style="width:100%;height:100%;object-fit:cover;display:block;">
+</div>
+<div style="display:flex;gap:8px;margin-bottom:10px;">
+<span class="tag">Self-Initiated</span>
+</div>
+<h3 style="font-family:var(--font-display);font-weight:600;font-size:19px;margin:0 0 6px;color:var(--color-text);">Scran Dash</h3>
+<p style="font-size:14px;line-height:1.5;margin:0 0 8px;color:color-mix(in srgb, var(--color-text) 75%, transparent);">A cozy hedgehog-dad game, crossing Katamari Damacy with Untitled Goose Game. Design Lead &amp; Ideator.</p>
+<span style="font-size:13px;font-weight:600;color:var(--color-accent);">Read the case study →</span>
+</a>
+
+</div>
+</section>
+
+<footer style="padding:32px 0 60px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--color-divider);font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent);">
+<span>© Loretta Lok</span>
+<div style="display:flex;gap:20px;">
+<a href="mailto:loretta.lok@gmail.com">loretta.lok@gmail.com</a>
+<a href="https://loretta-lok.itch.io" target="_blank" rel="noopener">itch.io</a>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+</body>
+</html>
